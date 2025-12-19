@@ -17,7 +17,12 @@ body {
   margin: 0;
   font-size: 12px;
   line-height: 1.2;
-  font-weight: bold;
+  font-weight: 600;
+}
+.notice__hours {
+  font-size: 11px;
+  opacity: 0.75;
+  font-weight: 400;
 }
 .notice__close {
   position: absolute;

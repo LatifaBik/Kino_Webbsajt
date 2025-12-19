@@ -6,8 +6,12 @@ body {
 .notice {
   background-color: #e6edb8;
   padding: 17px 14px;
-  position: relative;
+  position: sticky;
+  top: 0;
   text-align: center;
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: noticeIn 400ms ease-out forwards;
 }
 .notice__text {
   margin: 0;
@@ -23,4 +27,11 @@ body {
   background: transparent;
   cursor: pointer;
   font-size: 18px;
+}
+
+@keyframes noticeIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

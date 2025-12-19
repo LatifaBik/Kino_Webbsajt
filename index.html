@@ -1,89 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF_8">
     <meta name="viewport" content="width=device_width, initial_scale=1.0">
     <title>KINO _ Movie Theater</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font_awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
+
 <body>
-   <header>
-    <div class="container">
-        <div class="header_top">
-            <div class="logo">KINO</div>
-            <div class="auth_buttons">
-                <button class="btn btn_login">Search</button>
-                <button class="btn btn_join">JOIN/Login</button>
-                <button class="btn btn_join">Logout</button>
+    <header>
+        <div class="container">
+            <div class="header_top">
+                <div class="logo">KINO</div>
+                <div class="auth_buttons">
+                    <button class="btn btn_login">Search</button>
+                    <button class="btn btn_join">JOIN/Login</button>
+                    <button class="btn btn_join">Logout</button>
+                </div>
             </div>
         </div>
-    </div>
-</header>
-    
+    </header>
+
     <main class="container">
         <section class="carousel">
             <div class="carousel_inner">
                 <!__ Slides __>
-                <div class="carousel_slide slide_1 active">
-                    <div class="slide_content">
-                        <h1 class="festival_title">Höstlovsbio på KINO</h1>
-                        <h2 class="film_title">Neon Dreams</h2>
-                        <div class="festival_dates">28 OCT _ 7 NOV</div>
+                    <div class="carousel_slide slide_1 active">
+                        <div class="slide_content">
+                            <h1 class="festival_title">Höstlovsbio på KINO</h1>
+                            <h2 class="film_title">Neon Dreams</h2>
+                            <div class="festival_dates">28 OCT _ 7 NOV</div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="carousel_slide slide_2">
-                    <div class="slide_content">
-                        <h1 class="festival_title">Höstlovsbio på KINO</h1>
-                        <h2 class="film_title">The Last Sunset</h2>
-                        <div class="festival_dates">28 OCT _ 7 NOV</div>
+
+                    <div class="carousel_slide slide_2">
+                        <div class="slide_content">
+                            <h1 class="festival_title">Höstlovsbio på KINO</h1>
+                            <h2 class="film_title">The Last Sunset</h2>
+                            <div class="festival_dates">28 OCT _ 7 NOV</div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="carousel_slide slide_3">
-                    <div class="slide_content">
-                        <h1 class="festival_title">Höstlovsbio på KINO</h1>
-                        <h2 class="film_title">Echoes of Silence</h2>
-                        <div class="festival_dates">28 OCT _ 7 NOV</div>
+
+                    <div class="carousel_slide slide_3">
+                        <div class="slide_content">
+                            <h1 class="festival_title">Höstlovsbio på KINO</h1>
+                            <h2 class="film_title">Echoes of Silence</h2>
+                            <div class="festival_dates">28 OCT _ 7 NOV</div>
+                        </div>
                     </div>
-                </div>
             </div>
-            
+
             <div class="carousel_controls_bottom">
                 <button class="carousel_control prev"><i class="fas fa_chevron_left"></i></button>
                 <button class="carousel_control next"><i class="fas fa_chevron_right"></i></button>
             </div>
-            
+
             <div class="carousel_indicators">
                 <div class="indicator active" data_slide="0"></div>
                 <div class="indicator" data_slide="1"></div>
                 <div class="indicator" data_slide="2"></div>
             </div>
-            
+
             <div class="carousel_booking">
                 <button class="btn btn_join book_now_btn">Book Now</button>
             </div>
         </section>
-        
+
         <section class="movies_section">
             <h2 class="section_title">Aktuella visningar</h2>
-            
+
             <div class="movies_carousel">
                 <button class="carousel_nav_btn prev_btn" aria_label="Previous movies">
                     <i class="fas fa_chevron_left"></i>
                 </button>
-                
+
                 <div class="movies_carousel_container">
                     <div class="movies_carousel_track" id="currentMoviesTrack">
                         <!__ Movie cards will be generated by JavaScript __>
                     </div>
                 </div>
-                
+
                 <button class="carousel_nav_btn next_btn" aria_label="Next movies">
                     <i class="fas fa_chevron_right"></i>
                 </button>
-                
+
                 <div class="carousel_indicators movie_indicators" id="currentMoviesIndicators">
                     <!__ Indicators will be generated by JavaScript __>
                 </div>
@@ -92,22 +97,22 @@
 
         <section class="movies_section">
             <h2 class="section_title">Aktuella och kommande event</h2>
-            
+
             <div class="movies_carousel">
                 <button class="carousel_nav_btn prev_btn" aria_label="Previous events">
                     <i class="fas fa_chevron_left"></i>
                 </button>
-                
+
                 <div class="movies_carousel_container">
                     <div class="movies_carousel_track" id="eventsTrack">
                         <!__ Movie cards will be generated by JavaScript __>
                     </div>
                 </div>
-                
+
                 <button class="carousel_nav_btn next_btn" aria_label="Next events">
                     <i class="fas fa_chevron_right"></i>
                 </button>
-                
+
                 <div class="carousel_indicators movie_indicators" id="eventsIndicators">
                     <!__ Indicators will be generated by JavaScript __>
                 </div>
@@ -116,22 +121,22 @@
 
         <section class="movies_section">
             <h2 class="section_title">Snart på bio</h2>
-            
+
             <div class="movies_carousel">
                 <button class="carousel_nav_btn prev_btn" aria_label="Previous coming soon">
                     <i class="fas fa_chevron_left"></i>
                 </button>
-                
+
                 <div class="movies_carousel_container">
                     <div class="movies_carousel_track" id="comingSoonTrack">
                         <!__ Coming soon cards will be generated by JavaScript __>
                     </div>
                 </div>
-                
+
                 <button class="carousel_nav_btn next_btn" aria_label="Next coming soon">
                     <i class="fas fa_chevron_right"></i>
                 </button>
-                
+
                 <div class="carousel_indicators movie_indicators" id="comingSoonIndicators">
                     <!__ Indicators will be generated by JavaScript __>
                 </div>
@@ -140,94 +145,103 @@
 
         <section class="movies_section">
             <h2 class="section_title">Populära filmer</h2>
-            
+
             <div class="movies_carousel">
                 <button class="carousel_nav_btn prev_btn" aria_label="Populära filmer">
                     <i class="fas fa_chevron_left"></i>
                 </button>
-                
+
                 <div class="movies_carousel_container">
                     <div class="movies_carousel_track" id="popularMoviesTrack">
                         <!__ Popular movie cards will be generated by JavaScript __>
                     </div>
                 </div>
-                
+
                 <button class="carousel_nav_btn next_btn" aria_label="Next popular">
                     <i class="fas fa_chevron_right"></i>
                 </button>
-                
+
                 <div class="carousel_indicators movie_indicators" id="popularMoviesIndicators">
                     <!__ Indicators will be generated by JavaScript __>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <section class="movies_section">
-      <h2 class="section_title">Cafe&Bistro</h2>
-      <article class="">
-        <img src="image1.png">
-      </article>
+        <h2 class="section_title">Cafe&Bistro</h2>
+        <article class="">
+            <img src="image1.png">
+        </article>
     </section>
 
     <footer>
-        <section class="container">
+        <section class="footer_container">
             <section class="footer_content">
-                 <div class="footer__section">
-                <h3>Om oss</h3>
-                <ul class="footer_links">
-                  <li><a href="#">Jobba hos oss</a></li>
-                  <li><a href="#">Press</a></li>
-                  <li><a href="#">Om Kino</a></li>
-                  <li><a href="#">Filmfestivalen</a></li>
-                  <li><a href="#">Hitta hit</a></li>
-                </ul>
-              </div>
+                <div class="footer_section">
+                    <h3>Om oss</h3>
+                    <ul class="footer_links">
+                        <li><a href="#">Jobba hos oss</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Om Kino</a></li>
+                        <li><a href="#">Filmfestivalen</a></li>
+                        <li><a href="#">Hitta hit</a></li>
+                    </ul>
+                </div>
 
                 <div class="footer_section">
-                <h3>Övrigt</h3>
-                <ul class="footer_links">
-                  <li><a href="#">Köpvilkor</a></li>
-                  <li><a href="#">Integritetspolicy</a></li>
-                  <li><a href="#">Aldersgränser</a></li>
-                  <li><a href="#">Tillgänglighet</a></li>
-                  <li><a href="#">Filmfestivalen</a></li>
-                </ul>
-              </div>
-
-              <div class="footer_section">
-                <h3>Hjälp & Kontakt</h3>
-                <ul class="contact_info">
-                  <li><i class="fas fa_map_marker_alt"></i> Storgatan 12, 123 45 Lycksele</li>
-                  <li><i class="fas fa_phone"></i> +46 950-xxxxxxxx</li>
-                  <li><i class="fas fa_envelope"></i> info@kino.com</li>
-                </ul>
-              </div>
-                            
-              <div class="footer_section">
-                <h3>Sociala medier</h3>
-                <div class="site_map__item__links">
-                    <a href="#" class="site_map__item__link"><i class="fab fa_twitter"></i></a>
-                    <a href="#" class="site_map__item__link"><i class="fab fa_facebook_f"></i></a>
-                    <a href="#" class="site_map__item__link"><i class="fab fa_instagram"></i></a>
+                    <h3>Övrigt</h3>
+                    <ul class="footer_links">
+                        <li><a href="#">Köpvilkor</a></li>
+                        <li><a href="#">Integritetspolicy</a></li>
+                        <li><a href="#">Aldersgränser</a></li>
+                        <li><a href="#">Tillgänglighet</a></li>
+                        <li><a href="#">Filmfestivalen</a></li>
+                    </ul>
                 </div>
-              </div>
-            </section>
 
-            <section class="nyhetsbrev">
-                <h3>Nyhetsbrev</h3>
-                <div class="newsletter_form">
-                    <input type="email" placeholder="you@example.com">
-                    <button type="submit" class="btn btn_join">Anmäl dig</button>
+                <div class="footer_section">
+                    <h3>Hjälp & Kontakt</h3>
+                    <ul class="contact_info">
+                        <li><i class="fas fa_map_marker_alt"></i> Storgatan 12, 123 45 Lycksele</li>
+                        <li><i class="fas fa_phone"></i> +46 950-xxxxxxxx</li>
+                        <li><i class="fas fa_envelope"></i> info@kino.com</li>
+                    </ul>
                 </div>
+
+                <div class="footer_section">
+                    <h3>Sociala medier</h3>
+                    <div class="social-links">
+                        <div class="social">
+                            <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                </section>
+        
+                <section>
+                <div class="footer_extra">
+                
+                    <h3>Nyhetsbrev</h3>
+
+                    <form class="newsletter_form">
+                        <input type="email" placeholder="you@example.com">
+                        <button type="submit" class="btn btn_join">Anmäl dig</button>
+                    </form>
+                </div>
+                                             
             </section>
 
             <section class="copyright">
                 <p>&copy; 2025 KINO. All rights reserved.</p>
             </section>
-          </section>
+        </section>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
+
 </html>

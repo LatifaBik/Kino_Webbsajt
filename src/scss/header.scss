@@ -1,5 +1,6 @@
 .header {
     background-color: #1A0000;
+    position: relative;
 
     &__top {
         padding: 20px;
@@ -16,7 +17,7 @@
     &__menu-button {
         background-color: #1A0000;
         color: white;
-        font-size: 0.9rem;
+        font-size: 1.6rem;
         border: none;
         cursor: pointer;
     }
@@ -35,35 +36,41 @@
 
         &--active {
             display: flex; // visas när klassen läggs till
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-logo {
+            position: absolute;
+            top: 2rem; // avstånd från toppen
+            left: 50%;
+            transform: translateX(-50%); // centrerar horisontellt
+            max-width: 200px;
         }
 
         &-close {
             position: absolute;
             top: 2.5rem;
             left: 1.9rem;
-            font-size: 0.9rem;
+            font-size: 2.3rem;
             border: 0;
             color: white;
             cursor: pointer;
             background-color: #0C0000;
         }
 
-        &__logomenu{
-            width: 120px;
-            background-color: orange;
-        }
         &-list {
             list-style: none;
             display: flex;
             flex-direction: column;
-            justify-content: center; // centrerar listan vertikalt i nav
-            align-items: center; // centrerar hela UL horisontellt
+            margin-left: 80px;
+            margin-top: -300px;
             padding: 0;
-            margin-top: -100px;
         }
 
         &-item {
-            margin: 0.1rem 0;
+            margin: 0.3rem 0;
             font-size: 2rem;
             width: 260px; // fast bredd för alla items 
             text-align: left; // vänsterjusterar texten inom den centrerade boxen
@@ -74,4 +81,15 @@
             }
         }
     }
+
+    &__logomenu {
+        width: 120px;
+        background-color: orange;
+        margin-top: -280px;
+        margin-left: 200px;
+    }
+}
+
+.close-menu{
+    font-size: 1rem;
 }

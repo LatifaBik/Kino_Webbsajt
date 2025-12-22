@@ -4,12 +4,33 @@
 
     &__theme {
         display: flex;
-        align-items: center;
+        flex-direction: column; // staplar auth under ikonerna 
+        align-items: flex-end; // allt till höger
+        gap: 0.5rem;
+        margin-right:20px;
+        cursor: pointer;
 
         &-btn {
-            color: rgb(41, 158, 68);
+            color: rgb(255, 255, 255);
             font-size: 1rem;
             align-items: right;
+            border: none;
+            background-color: transparent;
+             cursor: pointer;
+
+            &-lightmode {
+                color: yellow;
+            }
+
+            &-darkmode {
+                color: rgb(108, 108, 106);
+            }
+        }
+
+        &-icons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 2rem;
         }
     }
 
@@ -18,10 +39,10 @@
         left: 50%;
         transform: translateX(-50%);
         max-width: 270px;
+        margin-top: 10px;
     }
 
     &__top {
-        padding: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -30,15 +51,18 @@
     &__menu-button {
         background-color: #1A0000;
         color: white;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         border: none;
         cursor: pointer;
-        margin-bottom:2rem;
+        margin: 90px 0 20px 0;
     }
 
     &__auth-buttons {
-        background-color: orange;
-        margin-bottom:2rem;
+        display: flex;
+        gap: 1.5rem;
+        color: white;
+        margin-bottom: 2rem;
+        
     }
 
     &__nav {
@@ -114,4 +138,9 @@
 
 .close-menu {
     font-size: 1rem;
+}
+
+.divider-btn {
+
+    color: rgb(118, 113, 113);
 }

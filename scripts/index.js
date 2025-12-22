@@ -1,7 +1,3 @@
-// Close Notice banner
-const notice = document.querySelector(".notice");
-const closeBtn = document.querySelector(".notice__close");
+import { closeNotice } from "/scripts/notice.js";
 
-closeBtn.addEventListener("click", () => {
-  notice.style.display = "none";
-});
+closeNotice();

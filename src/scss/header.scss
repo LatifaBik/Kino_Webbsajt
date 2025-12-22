@@ -2,16 +2,29 @@
     background-color: #1A0000;
     position: relative;
 
+    &__theme {
+        display: flex;
+        align-items: center;
+
+        &-btn {
+            color: rgb(41, 158, 68);
+            font-size: 1rem;
+            align-items: right;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 270px;
+    }
+
     &__top {
         padding: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-
-    &__logo {
-        height: 79px;
-        object-fit: contain;
     }
 
     &__menu-button {
@@ -20,6 +33,12 @@
         font-size: 1.6rem;
         border: none;
         cursor: pointer;
+        margin-bottom:2rem;
+    }
+
+    &__auth-buttons {
+        background-color: orange;
+        margin-bottom:2rem;
     }
 
     &__nav {
@@ -54,7 +73,7 @@
             left: 52%;
             transform: translateX(-50%);
             max-width: 270px;
-            
+
         }
 
         &-close {

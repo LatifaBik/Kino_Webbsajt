@@ -1,0 +1,35 @@
+/* default = dark mode */
+:root {
+
+      --bg-color: #1A0000;
+  --text-color: #ffffff;
+  --menu-bg: #0C0000;
+  --button-bg: #350000;
+  --button-text: #ffffff;
+
+}
+/* light mode */
+body.light {
+  --bg-color: #EBEDED;
+  --text-color: #000000;
+  --menu-bg: #EBE3E3;
+  --button-bg: #350000;
+  --button-text: #ffffff;
+}
+
+
+body.dark .logo--light {
+  display: none;
+}
+
+body:not(.dark) .logo--dark {
+  display: none;
+}
+ //Togelle button styles
+.theme-switch {
+  background: #000;
+}
+
+body.dark .theme-switch {
+  background: #FF7000;
+}

@@ -1,3 +1,5 @@
+@use '../lib/variables_mixins' as *;
+
 /* default = dark mode */
 :root {
   --bg-color: #EBEDED;
@@ -18,5 +20,36 @@ body {
 }
 
 body.dark #theme-toggle {
-  background: #ff7000;
+background:  #707070;; 
 }
+
+#theme-toggle {
+  width: 32px;
+  height: 22px;
+  border-radius: 4px;
+
+  background: #ff7a00; /* orange ruta som i prototyp */
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+#theme-toggle i {
+  font-size: 14px;
+  color: #000;
+}
+
+/* DARK MODE */
+body.dark #theme-toggle {
+  background: #000;
+}
+
+body.dark #theme-toggle i {
+  color: #ff7a00;
+  transform: scaleX(-1); /* 🔑 öppna månen åt vänster */
+}
+

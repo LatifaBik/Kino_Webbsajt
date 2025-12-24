@@ -6,56 +6,54 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>KINO _ Movie Theater</title>
-    <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font_awesome/6.4.0/css/all.min.css"> -->
-    <script type="module" src="/scripts/index.js"></script>
-    <!-- <link rel="stylesheet" href="main.css"> -->
+    <!--<link rel="stylesheet" href="main.scss"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="header__top">
-                <button class="header__menu-button" aria-label="Menu">☰ MENY</button>
-                <img class="header__logo" src="assets/images/logo1.png" alt="Logga - Kino bio">
-                <div class="auth-buttons">
+    <div class="header__theme">
+        <button class="btn btn_light" aria-label="toggle light">
+            <i class="fa-solid fa-sun"></i>
+        </button>
 
-                    <button class="btn btn_login">Search</button>
-                    <button class="btn btn_join">JOIN/Login</button>
-                    <button class="btn btn_join">Logout</button>
-
-                     <button id="theme-toggle" aria-label="Toggle theme">
-                            <i id="theme-icon" class="fa-solid fa-circle-half-stroke"></i>
-                        </button>
-                    <button id="theme-toggle" aria-label="Toggle dark/light mode">
-                        <i class="fa-solid fa-moon"></i>
-                       
-
-                    </button>
+        <button class="btn btn_dark" aria-label="toggle dark">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+    </div>
 
 
-                </div>
-            </div>
 
-            <nav class="header__nav">
-                <button class="header__nav-close" aria-label="Stäng menyn">
-                    ✕ <span class="close-menu">MENY</span></button>
-                <img class="header__nav-logo" src="/src/assets/logo1.png">
+    </div>
 
-                <ul class="header__nav-list">
-                    <li class="header__nav-item"><a href="index.html">På bio just nu</a></li>
-                    <li class="header__nav-item"><a href="all-movies.html">Kommande filmer</a></li>
-                    <li class="header__nav-item"><a href="#">Barnbio</a></li>
-                    <li class="header__nav-item"><a href="#">Presentkort</a></li>
-                    <li class="header__nav-item"><a href="#">Café&Bistro</a></li>
-                    <li class="header__nav-item"><a href="#">Event</a></li>
-                    <li class="header__nav-item"><a href="#">Kundservice</a></li>
-                    <li class="header__nav-item"><a href="#">Mina sidor</a></li>
-                    <li class="header__nav-item"><a href="#">Företag</a></li>
-                </ul>
-            </nav>
-        </header>
+    <div class="header__top">
+        <button class="header__menu-button" aria-label="Menu">☰ MENY</button>
+        <img class="header__logo" src="assets/images/logo1.png" alt="Logga - Kino bio">
+        <div class="auth-buttons">
+            <button class="btn btn_login">Search</button>
+            <button class="btn btn_join">JOIN/Login</button>
+            <button class="btn btn_join">Logout</button>
+        </div>
+    </div>
+
+    <nav class="header__nav">
+        <button class="header__nav-close" aria-label="Stäng menyn">
+            ✕ <span class="close-menu">MENY</span></button>
+        <img class="header__nav-logo" src="/src/assets/logo1.png">
+
+        <ul class="header__nav-list">
+            <li class="header__nav-item"><a href="index.html">På bio just nu</a></li>
+            <li class="header__nav-item"><a href="all-movies.html">Kommande filmer</a></li>
+            <li class="header__nav-item"><a href="#">Barnbio</a></li>
+            <li class="header__nav-item"><a href="#">Presentkort</a></li>
+            <li class="header__nav-item"><a href="#">Café&Bistro</a></li>
+            <li class="header__nav-item"><a href="#">Event</a></li>
+            <li class="header__nav-item"><a href="#">Kundservice</a></li>
+            <li class="header__nav-item"><a href="#">Mina sidor</a></li>
+            <li class="header__nav-item"><a href="#">Företag</a></li>
+        </ul>
+    </nav>
+    </header>
     </div>
 
     <main class="container">
@@ -299,8 +297,6 @@
                         </div>
                     </div>
                 </div>
-                </div>
-
 
             </section>
         </section>
@@ -311,7 +307,8 @@
         </section> -->
     </footer>
 
-    <script type="module" src="/src/index.js"></script>
+    <script type="module" src="/scripts/index.js"></script>
+
 </body>
 
 </html>

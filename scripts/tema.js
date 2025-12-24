@@ -1,30 +1,10 @@
 
 export function toggleTheme() {
 
-  /*const btn = document.getElementById('theme-toggle');
-const icon = document.getElementById('theme-icon');
-
-function setIcon(isDark) {
-  icon.classList.remove('fa-moon', 'fa-circle-half-stroke');
-  icon.classList.add(isDark ? 'fa-circle-half-stroke' : 'fa-moon');
-}
-
-// init från localStorage
-/*const savedTheme = localStorage.getItem('theme');
-const isDark = savedTheme === 'dark';
-document.body.classList.toggle('dark', isDark);
-setIcon(isDark);
-
-btn.addEventListener('click', () => {
-  const nowDark = document.body.classList.toggle('dark');
-  localStorage.setItem('theme', nowDark ? 'dark' : 'light');
-  setIcon(nowDark);
-});*/
-
-  const toggleBtn = document.querySelector('#theme-toggle');
+  const toggleBtn = document.querySelector('.btn btn_ddark');
 
   // Sparat tema vid start
-  const savedTheme = localStorage.getItem('theme');
+  const savedTheme = localStorage.getItem('.btn btn_ddark');
   if (savedTheme === 'dark') {
     document.body.classList.add('dark');
   }
@@ -52,6 +32,25 @@ btn.addEventListener('click', () => {
   } else {
     icon.classList.replace('fa-sun', 'fa-moon');
   }
+});*/
+  /*const btn = document.getElementById('theme-toggle');
+const icon = document.getElementById('theme-icon');
+
+function setIcon(isDark) {
+  icon.classList.remove('fa-moon', 'fa-circle-half-stroke');
+  icon.classList.add(isDark ? 'fa-circle-half-stroke' : 'fa-moon');
+}
+
+// init från localStorage
+/*const savedTheme = localStorage.getItem('theme');
+const isDark = savedTheme === 'dark';
+document.body.classList.toggle('dark', isDark);
+setIcon(isDark);
+
+btn.addEventListener('click', () => {
+  const nowDark = document.body.classList.toggle('dark');
+  localStorage.setItem('theme', nowDark ? 'dark' : 'light');
+  setIcon(nowDark);
 });*/
 
 }

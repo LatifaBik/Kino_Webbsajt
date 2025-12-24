@@ -1,9 +1,12 @@
+@use '../lib/variables_mixins' as *;
+
+
  .footer {
   &__container {
   display: flex;
   flex-direction: column;
-  background-color: #161313;
-  color: #fff;
+  background-color: $dark-footer;
+  color: $dark-text;
   font-size: 1.1rem;
   font-family: sans-serif;
  }
@@ -17,7 +20,7 @@
   }
 
   &__section {
-    flex: 1 1 160px;     
+    flex: 1 1 120px;     
     padding: 0.1rem 3rem 0rem;
     margin: 0rem;
   }
@@ -34,7 +37,7 @@
   }
   &__links { 
     font-size: 0.8rem;
-    color: #fff;
+    color: $dark-text;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -54,7 +57,7 @@
   } 
   &__terms {
     font-size: 0.8rem;
-    color: #fff;
+    color: $dark-text;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -76,7 +79,7 @@
   }
   &__info {
     font-size: 0.8rem;
-    color: #fff;
+    color: $dark-text;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -98,7 +101,7 @@
     
       }
   &__icons { 
-    color: #fff;
+    color: $dark-text;
     gap: 2rem;
      font-size: 3rem;
   }
@@ -149,14 +152,14 @@
   
 } 
 &__submit { 
-  background-color: #350000;
-  color: #fff;
+  background-color: $dark-button;
+  color: $dark-text;
   border: none;
   padding: 0.6rem 1rem;
   border-radius: 8px;
   cursor: pointer;
   font-size: 0.8rem;
-  white-space: nowrap;
+  white-space: nowrap; 
 }
 
 }

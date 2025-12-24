@@ -4,10 +4,12 @@
   "description": "Uppgiften går ut på att i grupp planera, strukturera och påbörja utvecklingen av en biograf-webbsajt enligt Scrum-metodik.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass-watch": "sass --watch src/main.scss:main.css",
-    "prepare": "husky",
-    "dev": "vite"
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+    "sass-watch": "sass --watch src/main.scss:css/main.css",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",

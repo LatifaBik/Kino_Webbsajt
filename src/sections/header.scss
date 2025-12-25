@@ -1,27 +1,49 @@
 @use '../lib/variables_mixins' as *;
 
+
 .header {
     background-color: $dark-bg;
     position: relative;
+    flex-direction: column; 
+    justify-content: flex-end; 
+    height: 140px; 
 
-    &__top {
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    @include small-screen {
+        height: 170px;
     }
 
     &__logo {
-        height: 79px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 270px;
         object-fit: contain;
+        top: 1rem; 
+    }
+
+    &__top {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+
+        @include small-screen {
+            bottom: 10px;
+        }
     }
 
     &__menu-button {
         background-color: $dark-bg;
         color: $dark-text;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         border: none;
         cursor: pointer;
+        margin-right: auto; 
+
     }
 
     &__nav {
@@ -56,6 +78,7 @@
             left: 52%;
             transform: translateX(-50%);
             max-width: 270px;
+
         }
 
         &-close {
@@ -74,9 +97,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center; // centrerar vertikalt
-            height: 100vh; // tar hela höjden på sidan
-            margin-top:170px;
+            justify-content: center;
+            height: 100vh;
+            margin-top: 170px;
         }
 
         &-item {

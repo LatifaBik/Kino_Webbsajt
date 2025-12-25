@@ -1,56 +1,24 @@
 
 export function toggleTheme() {
+  const lightBtn = document.querySelector('.header__theme--light');
+  const darkBtn  = document.querySelector('.header__theme--dark');
 
-  const toggleBtn = document.querySelector('.btn btn_ddark');
+  const saved = localStorage.getItem('theme');
 
-  // Sparat tema vid start
-  const savedTheme = localStorage.getItem('.btn btn_ddark');
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark');
+  // default = dark
+  if (saved === 'light') {
+    document.body.classList.add('light');
   }
 
-  if (!toggleBtn) return;
-
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-
-    const theme = document.body.classList.contains('dark')
-      ? 'dark'
-      : 'light';
-
-    localStorage.setItem('theme', theme);
+  lightBtn?.addEventListener('click', () => {
+    document.body.classList.add('light');
+    localStorage.setItem('theme', 'light');
   });
-  
- /* const btn = document.querySelector('#theme-toggle');
-const icon = btn.querySelector('i');
 
-btn.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-
-  if (document.body.classList.contains('dark')) {
-    icon.classList.replace('fa-moon', 'fa-sun');
-  } else {
-    icon.classList.replace('fa-sun', 'fa-moon');
-  }
-});*/
-  /*const btn = document.getElementById('theme-toggle');
-const icon = document.getElementById('theme-icon');
-
-function setIcon(isDark) {
-  icon.classList.remove('fa-moon', 'fa-circle-half-stroke');
-  icon.classList.add(isDark ? 'fa-circle-half-stroke' : 'fa-moon');
+  darkBtn?.addEventListener('click', () => {
+    document.body.classList.remove('light');
+    localStorage.setItem('theme', 'dark');
+  });
 }
 
-// init från localStorage
-/*const savedTheme = localStorage.getItem('theme');
-const isDark = savedTheme === 'dark';
-document.body.classList.toggle('dark', isDark);
-setIcon(isDark);
 
-btn.addEventListener('click', () => {
-  const nowDark = document.body.classList.toggle('dark');
-  localStorage.setItem('theme', nowDark ? 'dark' : 'light');
-  setIcon(nowDark);
-});*/
-
-}

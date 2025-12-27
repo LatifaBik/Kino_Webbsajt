@@ -20,13 +20,29 @@
                 <button class="header__menu-button" aria-label="Menu">☰ MENY</button>
 
 
-                              <div class="auth_buttons">
+                <div class="auth_buttons">
                     <button class="btn btn_login">Search</button>
                     <button class="btn btn_join">JOIN/Login</button>
-                    <button class="btn btn_join">Logout</button>
+                    <button class="open-register">Register</button>
                 </div>
 
-               
+                <!--Registrera användare-->
+                <div class="register">
+                    <div class="register__modal">
+                        <div class="register__content">
+                            <button class="register__close" aria-label="Stäng">✕</button>
+                            <h2 class="register__title">Registrera dig</h2>
+                            <form class="register__form">
+                                <input class="register__input" type="text" placeholder="Namn" name="username" required>
+                                <input class="register__input" type="email" placeholder="E-post" name="email" required>
+                                <input class="register__input" type="password" placeholder="Lösenord" name="password"
+                                    required>
+                                <button class="register__submit" type="submit">Skapa konto</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
 
 
                 <nav class="header__nav">
@@ -49,7 +65,7 @@
         </header>
     </div>
 
-    
+
 
     <main class="container">
         <section class="carousel">

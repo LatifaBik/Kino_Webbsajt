@@ -1,0 +1,32 @@
+@use '../lib/variables_mixins.scss' as *;
+
+body {
+  background-color: $dark-bg ;
+
+}
+
+.review-form {
+  margin-top: 2rem;
+
+  &__field {
+    margin-bottom: 1rem;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+

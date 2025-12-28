@@ -1,8 +1,13 @@
-import './användarens-egen-sida.js';
+import './member-page.js';
 
-import { initMemberPage } from './användarens-egen-sida.js';
+import { initMemberPage } from './member-page.js';
 
-// Kör bara om rätt sida
-if (document.querySelector('.member-page')) {
+if (document.querySelector('.user__member--page')) {
   initMemberPage();
 }
+
+
+
+
+
+

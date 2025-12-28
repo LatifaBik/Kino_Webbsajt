@@ -19,19 +19,73 @@
                 <div class="logo">KINO</div>
                 <div class="auth_buttons">
                     
-                    <button class="btn btn_login">Search</button>
-                    <button class="btn btn_join">JOIN/Login</button>
-                    <button class="btn btn_join">Logout</button>
+                    <button class="btn btn_search">Search</button>
+                    <button class="btn btn_login">JOIN/Login</button>
+                    <button class="btn btn_logout">Logout</button>
                 </div>
             </div>
         </div>
     </header>
 
-   <section class="user__own-page">
+   <section class="user__member--page">
         <h2 class="section_title">Member page</h2>
-        <article class="">
-            <img src="image1.png">
+        <article class="Offers">
+            <h3 class="section_title">Member´s Offers</h3>
+            <img src="/src/Assets/offers.png">
+            <img src="/src/Assets/offers.png">
+            <img src="/src/Assets/offers.png">
+            <img src="/src/Assets/offers.png">
+           
         </article>
+
+          <article class="review">
+  <h3 class="section_title">Review form</h3>
+
+  <form class="review__form" id="reviewForm">
+    <div class="review__field">
+      <label class="review__label" for="movieTitle">Movie</label>
+      <select class="review__input" id="movieTitle" name="movieTitle" required>
+        <option value=" selected ">Choose a movie</option>
+        <option value="Neon Dreams">Neon Dreams</option>
+        <option value="The Last Sunset">The Last Sunset</option>
+        <option value="Echoes of Silence">Echoes of Silence</option>
+      </select>
+    </div>
+
+    <div class="review__field">
+      <label class="review__label" for="rating">Rating (1–5)</label>
+      <input
+        class="review__input"
+        id="rating"
+        name="rating"
+        type="number"
+        min="1"
+        max="5"
+        required
+      />
+    </div>
+
+    <div class="review__field">
+      <label class="review__label" for="reviewText">Your review</label>
+      <textarea
+        class="review__input review__textarea"
+        id="reviewText"
+        name="reviewText"
+        rows="4"
+        minlength="10"
+        maxlength="500"
+        required
+        placeholder="Write at least 10 characters..."
+      ></textarea>
+    </div>
+
+    <div class="review__actions">
+      <button class="review__btn" type="submit">Submit review</button>
+         </div>
+  </form>
+
+</article>
+
     </section>
 
 

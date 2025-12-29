@@ -1,8 +1,10 @@
- .footer {
+@use '../lib/variables_mixins' as *; 
+ 
+.footer {
   &__container {
   display: flex;
   flex-direction: column;
-  background-color: $dark-foote;
+  background-color: $dark-footer;
   color: $dark-text;
   font-size: 1.1rem;
   font-family: sans-serif;

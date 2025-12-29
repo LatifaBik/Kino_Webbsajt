@@ -46,6 +46,22 @@
 
     }
 
+    &__auth {
+        display: flex;
+        align-items: center;
+    }
+
+    &__login-btn {
+        background: transparent;
+        color: #fff;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        cursor: pointer;
+        text-transform: uppercase;
+
+    }    
+     
     &__nav {
         opacity: 0;
         visibility: hidden;

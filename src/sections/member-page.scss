@@ -2,12 +2,35 @@
 
 body {
   background-color: $dark-bg ;
+  color: $dark-text;
+}
+.member__page {
+  display: block;
+  align-items: center;
+ 
+
+.title { 
+   margin: 2rem 0.5rem;
+   font-size: 2.5rem;
+
+}
+&__Offers {
+display: flex;
+    gap: 1rem;
+    align-items: center;
 
 }
 
-.review-form {
+}
+.review {
+  display: block;
+  align-self: auto;
+  padding: 2rem 1rem 6rem 30rem;
   margin-top: 2rem;
 
+&__form {
+  margin-top: 2rem;
+}
   &__field {
     margin-bottom: 1rem;
   }
@@ -15,18 +38,23 @@ body {
   &__label {
     display: block;
     margin-bottom: 0.25rem;
+    font-size: 2rem;
+    font-family: sans-serif;
   }
 
   &__input {
-    width: 100%;
+    width: 35%;
     padding: 0.5rem;
+    border-radius: 1rem;
   }
 
-  &__actions {
+
+  &__btn {
     display: flex;
     gap: 1rem;
     align-items: center;
+    border-radius: 1rem;
+    padding: 0.9rem;
+    
   }
 }
-
-

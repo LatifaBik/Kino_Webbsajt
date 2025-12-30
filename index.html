@@ -149,29 +149,7 @@
         </div>
       </section>
 
-      <!-- Popularmovies, nothing we have discussed? I'll comment this out until we adress this.
-      <section class="movies_section">
-        <h2 class="section_title">Populära filmer</h2>
-
-        <div class="movies_carousel movies-carousel">
-          <button class="carousel_nav_btn prev_btn" type="button" aria-label="Previous popular movies">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-
-          <div class="movies_carousel_container">
-            <div id="popularMoviesTrack" class="movies-carousel__track"></div>
-          </div>
-
-          <button class="carousel_nav_btn next_btn" type="button" aria-label="Next popular movies">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-
-          <div class="carousel_indicators movie_indicators" id="popularMoviesIndicators"></div>
-        </div>
-      </section>
-      -->
     </main>
-
     <section class="movies_section">
       <h2 class="section_title">Cafe &amp; Bistro</h2>
       <article>
@@ -245,4 +223,176 @@
 
     <script type="module" src="/src/index.js"></script>
   </body>
+</html>
+<html lang="sv">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>KINO Lycksele | Film som roar och oroar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <header>
+        <div id="promoBanner">
+            <span><strong>Biljetter kan enbart köpas på biografen!</strong><br>Välkomen till oss på Storgatan 12 345, Lycksele</span>
+            <span class="material-symbols-outlined close-btn" onclick="closeBanner()">close</span>
+        </div>
+        <div class="header__theme">
+            <button class="header__theme-btn header__theme-btn--light" aria-label="toggle light">
+            <img class="header__theme-icon" src="/images/toggle2-light.png" alt="Light mode icon">
+            </button>
+
+            <button class="header__theme-btn header__theme-btn--dark" aria-label="toggle dark">
+                <img class="header__theme-icon" src="/images/toggle1-dark.png"  alt="Dark mode icon">
+            </button>
+        </div>
+
+       <div class="header__top">
+            <button class="header__menu-button" aria-label="Menu">☰ MENY</button>
+            <img class="header__logo" src="/images/logo2.png" alt="Logga - Kino bio">
+            <img class="header__logo-light" src="/images/logo1.png" alt="Logga - Kino bio">
+            
+            <div class="auth-buttons">
+                <span class="material-symbols-outlined btn_login">Search</span>
+                <span class="btn_join">JOIN/Login</span>
+                <span class="material-symbols-outlined btn_join">Logout</span>
+            </div>
+        </div>
+
+        <nav class="header__nav">
+            <button class="header__nav-close" aria-label="Stäng menyn">
+                ✕ <span class="close-menu">MENY</span>
+            </button>
+            <img class="header__nav-logo" src="/images/logo.png" alt="Kino Logo">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="index.html">På bio just nu</a></li>
+                <li class="header__nav-item"><a href="all-movies.html">Kommande filmer</a></li>
+                <li class="header__nav-item"><a href="#">Barnbio</a></li>
+                <li class="header__nav-item"><a href="#">Presentkort</a></li>
+                <li class="header__nav-item"><a href="#">Café&Bistro</a></li>
+                <li class="header__nav-item"><a href="#">Event</a></li>
+                <li class="header__nav-item"><a href="#">Kundservice</a></li>
+                <li class="header__nav-item"><a href="#">Mina sidor</a></li>
+                <li class="header__nav-item"><a href="#">Företag</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="carousel">
+            <div class="carousel_inner">
+               
+            </div>
+            <div class="carousel_controls_bottom">
+                <button class="carousel_control prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel_control next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="carousel_indicators">
+                <div class="indicator active" data_slide="0"></div>
+                <div class="indicator" data_slide="1"></div>
+            </div>
+            <div class="carousel_booking">
+                <button class="btn btn_join book_now_btn">Book Now</button>
+            </div>
+        </section>
+
+        <section class="movies_section">
+            <h2 class="section_title">Aktuella visningar</h2>
+            <div class="movies_carousel_wrapper">
+                <button class="carousel_nav_btn prev_btn">❮</button>
+                <div class="movies_carousel_track" id="currentMoviesTrack"></div>
+                <button class="carousel_nav_btn next_btn">❯</button>
+            </div>
+        </section>
+
+        <section class="movies_section">
+            <h2 class="section_title">Kommande visningar</h2>
+            <div class="movies_carousel_wrapper">
+                <button class="carousel_nav_btn prev_btn">❮</button>
+                <div class="movies_carousel_track" id="comingSoonTrack"></div>
+                <button class="carousel_nav_btn next_btn">❯</button>
+            </div>
+        </section>
+
+        <section class="movies_section">
+            <h2 class="section_title">Aktuella och kommande event</h2>
+            <div class="movies_carousel_wrapper">
+                <button class="carousel_nav_btn prev_btn">❮</button>
+                <div class="movies_carousel_track" id="eventsTrack">
+                    <div class="event_card" alt="Sport"></div>
+                    <div class="event_card" alt="Football"></div>
+                    <div class="event_card" alt="Film Festival"></div>
+                </div>
+                <button class="carousel_nav_btn next_btn">❯</button>
+            </div>
+        </section>
+
+        <section class="bistro-section">
+            <h2>Café&Bistro</h2>
+            <div class="bistro-banner">
+                <div class="bistro-logo">
+                    <h1>Bistro</h1>
+                    <div class="kino-text">KINO</div>
+                </div>
+                <div class="bistro-menu-list">
+                   
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer__container">
+        <section class="footer__content">
+            <div class="footer__section">
+                <h3>Om oss</h3>
+                <ul class="footer__links">
+                    <li><a href="#">Jobba hos oss</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Om Kino</a></li>
+                    <li><a href="#">Filmfestivalen</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h3>Övrigt</h3>
+                <ul class="footer__links">
+                    <li>Köpvillkor</li>
+                    <li>Integritetspolicy</li>
+                    <li>Åldersgränser</li>
+                    <li>Tillgänglighet</li>
+                    <li>Filmfestivalen</li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h3>Hjälp & Kontakt</h3>
+                <ul class="footer__info">
+                    <li><i class="fas fa-map-marker-alt"></i> Storgatan 12, 123 45 Lycksele</li>
+                    <li><i class="fas fa-phone"></i> 0950-xxxxxxx</li>
+                    <li><i class="fas fa-envelope"></i> info@kino.com</li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h3>Sociala medier</h3>
+                <div class="social">
+                    <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="footer__section newsletter">
+            <h3>Nyhetsbrev</h3>
+            <div class="newsletter">
+                <input class="newsletter__input" type="email" placeholder="email@example.com">
+                <button class="newsletter__submit" type="submit">Anmäl dig</button>
+            </div>
+        </section>
+    </footer>
+
+    <script type="module" src="/scripts/index.js"></script>
+</body>
 </html>

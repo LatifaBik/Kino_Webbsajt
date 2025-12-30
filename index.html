@@ -1,32 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KINO - Movie Theater</title>
+<html>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-  </head>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>KINO _ Movie Theater</title>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font_awesome/6.4.0/css/all.min.css">-->
+    <link rel="stylesheet" href="src/scss/main.css">
 
-  <body>
-    <header>
-      <div class="container">
-        <div class="header_top">
-          <div class="logo">KINO</div>
-          <div class="auth_buttons">
-            <button class="btn btn_login" type="button">Search</button>
-            <button class="btn btn_join" type="button">JOIN/Login</button>
-            <button class="btn btn_join" type="button">Logout</button>
-          </div>
-        </div>
-      </div>
-    </header>
+</head>
+<!-- Info / notice bar -->
+<div class="notice" role="status" aria-live="polite">
+    <p class="notice__text">Biljetter kan enbart köpas på biografen! <br> Välkommen till oss på Storgatan 12.</p>
+    <span class="notice__hours">Öppettider: 08:00 – 22:00</span>
+    <button class="notice__close" type="button" aria-label="Stäng notis">&times;</button>
+</div>
+
+<body>
+    <div class="container">
+        <header class="header">
+
+            <img class="header__logo" src="/assets/logo1.png" alt="Logga - Kino bio">
+
+            <div class="header__top">
+                <button class="header__menu-button" aria-label="Menu">☰ MENY</button>
+
+
+                <div class="header__auth">
+                    <button class="header__login-btn" aria-label="Logga in">JOIN / LOGIN</button>
+                    <button class="open-register">Registrera dig</button>
+                </div>
+
+                
+                <!-- Login användare -->
+                <div class="login">
+                    <div class="login__modal">
+                        <div class="login__content">
+                            <button class="login__close" aria-label="Stäng">✕</button>
+                            <h2 class="login__title">Logga in</h2>
+                            <form class="login__form">
+                                <input class="login__input" type="email" placeholder="E-post" name="email" required>
+                                <input class="login__input" type="password" placeholder="Lösenord" name="password" required>
+                                <!-- Glömt lösenord under lösenordet -->
+                                <a href="#" class="login__forgot">Glömt lösenord?</a>
+                                <button class="login__submit" type="submit">Logga in</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Registrera användare-->
+                <div class="register">
+                    <div class="register__modal">
+                        <div class="register__content">
+                            <button class="register__close" aria-label="Stäng">✕</button>
+                            <h2 class="register__title">Registrera dig</h2>
+                            <form class="register__form">
+                                <input class="register__input" type="text" placeholder="Namn" name="username" required>
+                                <input class="register__input" type="email" placeholder="E-post" name="email" required>
+                                <input class="register__input" type="password" placeholder="Lösenord" name="password"
+                                    required>
+                                <button class="register__submit" type="submit">Skapa konto</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <nav class="header__nav">
+                    <button class="header__nav-close" aria-label="Stäng menyn">
+                        ✕ <span class="close-menu">MENY</span></button>
+                    <img class="header__nav-logo" src="/assets/logo1.png">
+
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item"><a href="index.html">På bio just nu</a></li>
+                        <li class="header__nav-item"><a href="all-movies.html">Kommande filmer</a></li>
+                        <li class="header__nav-item"><a href="#">Barnbio</a></li>
+                        <li class="header__nav-item"><a href="#">Presentkort</a></li>
+                        <li class="header__nav-item"><a href="#">Café&Bistro</a></li>
+                        <li class="header__nav-item"><a href="#">Event</a></li>
+                        <li class="header__nav-item"><a href="#">Kundservice</a></li>
+                        <li class="header__nav-item"><a href="#">Mina sidor</a></li>
+                        <li class="header__nav-item"><a href="#">Företag</a></li>
+                    </ul>
+                </nav>
+        </header>
+    </div>
 
     <main class="container">
-      <section class="carousel">
+       <section class="carousel">
         <div class="carousel_inner">
           <!-- Slides -->
           <div class="carousel_slide slide_1 active">
@@ -172,94 +236,99 @@
       -->
     </main>
 
-     <!--TRAILER MODAL-->
-      <div id="trailerModal" class="trailer-modal hidden">
-        <div class="trailer-modal__backdrop"></div>
-        <div class="trailer-modal__content">
-          <button class="trailer-modal__close" type="button">✕</button>
-
-          <iframe
-            id="trailerIframe"
-            width="100%"
-            height="450"
-            src=""
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen>
-          </iframe>
-        </div>
-
     <section class="movies_section">
-      <h2 class="section_title">Cafe &amp; Bistro</h2>
-      <article>
-        <img src="image1.png" alt="Cafe & Bistro" />
-      </article>
+        <h2 class="section_title">Cafe&Bistro</h2>
+        <article class="">
+            <img src="image1.png">
+        </article>
     </section>
 
     <footer>
-      <section class="container">
-        <section class="footer_content">
-          <div class="footer_section">
-            <h3>Hjälp &amp; Kontakt</h3>
-            <ul class="contact_info">
-              <li><i class="fas fa-map-marker-alt"></i> Filmstaden 15, Stockholm</li>
-              <li><i class="fas fa-phone"></i> +46 8 123 4567</li>
-              <li><i class="fas fa-envelope"></i> info@kino.com</li>
-            </ul>
-          </div>
+        <section class="footer__container">
+            <section class="footer__content">
+                <div class="footer__section footer__section--about">
+                    <div class="footer__about"></div>
+                    <h3>Om oss</h3>
+                    <ul class="footer__links">
+                        <li><a href="#">Jobba hos oss</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Om Kino</a></li>
+                        <li><a href="#">Filmfestivalen</a></li>
+                        <li><a href="#">Hitta hit</a></li>
+                    </ul>
+                </div>
 
-          <div class="footer_section">
-            <h3>Om oss</h3>
-            <ul class="footer_links">
-              <li><a href="#">Jobba hos oss</a></li>
-              <li><a href="#">Press</a></li>
-              <li><a href="#">Om Kino</a></li>
-              <li><a href="#">Filmfestivalen</a></li>
-              <li><a href="#">Hitta hit</a></li>
-            </ul>
-          </div>
+                <div class="footer__section footer__section--other">
+                    <div class="footer__other"></div>
+                    <h3>Övrigt</h3>
+                    <ul class="footer__terms">
+                        <li><a href="#">Köpvilkor</a></li>
+                        <li><a href="#">Integritetspolicy</a></li>
+                        <li><a href="#">Åldersgränser</a></li>
+                        <li><a href="#">Tillgänglighet</a></li>
 
-          <div class="footer_section">
-            <h3>Övrigt</h3>
-            <ul class="footer_links">
-              <li><a href="#">Köpvillkor</a></li>
-              <li><a href="#">Integritetspolicy</a></li>
-              <li><a href="#">Åldersgränser</a></li>
-              <li><a href="#">Tillgänglighet</a></li>
-              <li><a href="#">Filmfestivalen</a></li>
-            </ul>
-          </div>
+                    </ul>
+                </div>
 
-          <div class="footer_section">
-            <h3>Sociala medier</h3>
-            <div class="site_map__item__links">
-              <a href="#" class="site_map__item__link" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="site_map__item__link" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="site_map__item__link" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </div>
-          </div>
+                <div class="footer__section footer__section--contact">
+                    <div class="footer__contact"></div>
+                    <h3>Hjälp & Kontakt</h3>
+                    <ul class="footer__info">
+                        <li><i class="fas fa_map_marker_alt"></i> <a
+                                href="https://maps.google.com/?q=Storgatan 12, 123 45 Lycksele">Storgatan 12, 123 45
+                                Lycksele</a></li>
+                        <li><i class="fas fa_phone"></i> <a href="tel:+46950xxxxxxxx">+46 950-xxxxxxxx</a></li>
+                        <li><i class="fas fa_envelope"></i> <a href="mailto:info@kino.com">info@kino.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section footer__section--social">
+                    <div class="footer__social"></div>
+                    <h3>Sociala medier</h3>
+                    <div class="footer__icons">
+                        <div class="social">
+                            <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="footer__section footer__section--extra">
+                    <div class="footer__extra">
+                        <div class="footer__row">
+                            <div class="newsletter">
+                                <h3 class="newsletter__title">Nyhetsbrev</h3>
+                                <input class="newsletter__input" type="email" placeholder="you@example.com">
+                                <button class="newsletter__submit" type="submit">Anmäl dig</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+
+            </section>
         </section>
-
-        <section class="nyhetsbrev">
-          <h3>Nyhetsbrev</h3>
-          <div class="newsletter_form">
-            <input type="email" placeholder="you@example.com" />
-            <button type="submit" class="btn btn_join">Prenumerera</button>
-          </div>
-        </section>
-
-        <section class="copyright">
-          <p>&copy; 2025 KINO. All rights reserved.</p>
-        </section>
-      </section>
     </footer>
+          <!--TRAILER MODAL-->
+                <div id="trailerModal" class="trailer-modal hidden">
+                  <div class="trailer-modal__backdrop"></div>
+                  <div class="trailer-modal__content">
+                    <button class="trailer-modal__close" type="button">✕</button>
 
+                    <iframe
+                      id="trailerIframe"
+                      width="100%"
+                      height="450"
+                      src=""
+                      frameborder="0"
+                      allow="autoplay; encrypted-media"
+                      allowfullscreen>
+                    </iframe>
+                  </div>
     <script type="module" src="/src/index.js"></script>
-  </body>
+</body>
+
 </html>

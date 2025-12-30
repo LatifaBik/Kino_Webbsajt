@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+}
+
+/* Notice banner */
+.notice {
+  background-color: #e6edb8;
+  padding: 17px 14px;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: noticeIn 400ms ease-out forwards;
+  z-index: 1000;
+
+  &__text {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  &__hours {
+    font-size: 15px;
+    opacity: 0.75;
+    font-weight: 400;
+  }
+
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font-size: 25px;
+  }
+}
+
+@keyframes noticeIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

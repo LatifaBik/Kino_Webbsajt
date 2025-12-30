@@ -1,7 +1,24 @@
-import "./styles/main.scss";
-import { fetchMovies } from "../scripts/api.js";
-import { renderMovieList } from "../scripts/createcard.js";
-import { openTrailer } from "../scripts/trailermodal.js"; 
+import { fetchMovies } from "./scripts/api.js";
+import { renderMovieList } from "./scripts/createcard.js";
+import { openTrailer } from "./scripts/trailermodal.js"; 
+
+import './sections/main.scss';
+import './sections/footer.scss';
+import './scripts/menu.js';
+import './scripts/register.js';
+
+
+import { toggleLogin } from './scripts/login.js';
+toggleLogin();
+
+import { toggleRegister } from './scripts/register.js';
+toggleRegister();
+
+import { toggleMenu } from './scripts/menu.js'; 
+toggleMenu(); 
+import { closeNotice } from './scripts/notice.js';
+closeNotice();
+
 
 function parseDate(dateStr) {
   if (!dateStr) return null;

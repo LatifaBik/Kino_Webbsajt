@@ -1,7 +1,7 @@
 @use "sass:color";
 @use '../lib/variables_mixins' as *;
 
-// --- 1. GLOBAL THEME (Dark Mode Default) ---
+
 body {
     background-color: $dark-bg;
     color: $text-white; // All text becomes white by default
@@ -12,27 +12,99 @@ h1, h2, .section_title, .film_title {
 }
 
 .header {
+    background-color: $dark-bg;
+    position: relative;
+
     &__top {
+        padding: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 15px;
-        border-bottom: 3px solid $text-muted;
-        border-radius: 0 0 20px 20px;
-        color: $text-white; // Default white
+    }
 
-        @media (min-width: 768px) {
-            padding: 10px 40px;
-        }
+    &__logo {
+        height: 79px;
+        object-fit: contain;
     }
 
     &__menu-button {
-        background-color: transparent;
+    
+        color: $dark-text;
+        font-size: 1.6rem;
         border: none;
         cursor: pointer;
-        font-weight: bold;
-        color: inherit; 
     }
+
+    &__nav {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.95);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 3;
+        flex-direction: column;
+        justify-content: center;
+        animation: navfadeandscale .66s cubic-bezier(.53, .52, .04, 1.06) 0s 1 both;
+
+        &--active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+
+        &-logo {
+            position: absolute;
+            top: 3rem;
+            left: 52%;
+            transform: translateX(-50%);
+            max-width: 270px;
+        }
+
+        &-close {
+            position: absolute;
+            top: 2.5rem;
+            left: 1.1rem;
+            font-size: 2.3rem;
+            border: 0;
+            color: $dark-text;
+            cursor: pointer;
+            
+        }
+
+        &-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; // centrerar vertikalt
+            height: 100vh; // tar hela höjden på sidan
+            margin-top:10px;
+        }
+
+        &-item {
+            margin: 0.3rem 0;
+            font-size: 1.5rem;
+            width: 260px;
+            text-align: left;
+
+            a {
+                text-decoration: none;
+                color: $dark-text;
+            }
+        }
+    }
+}
+
+.close-menu {
+    font-size: 1rem;
 }
 
 .auth-buttons span, 

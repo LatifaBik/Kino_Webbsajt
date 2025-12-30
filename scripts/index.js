@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     
-    movieCarousel();
     toggleMenu();
+    movieCarousel();
     closeBanner();
     toggleTheme();
 });

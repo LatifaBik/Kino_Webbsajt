@@ -36,7 +36,7 @@
         line-height: 2;
         
         a {
-            color: var(--text-muted);
+            color: $text-muted;
             text-decoration: none;
         }
     }
@@ -48,7 +48,7 @@
     font-size: 1.5rem;
     
     a {
-        color: var(--text-white);
+        color: $text-white;
     }
 }
 
@@ -65,7 +65,7 @@
     }
     
     &__submit {
-        background-color: var(--accent-red);
+        background-color: $accent-red;
         color: $text-white;
         border: none;
         padding: 0.6rem;

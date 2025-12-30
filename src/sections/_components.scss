@@ -32,7 +32,7 @@
     
     &_control {
         background: $dark-bg;
-        color: white;
+        color: $light-bg;
         border: none;
         padding: 10px;
         cursor: pointer;
@@ -107,8 +107,8 @@
 }
 
 .movie-details-content {
-    background: rgba(0, 0, 0, 0.9);
-    color: white;
+    background: $dark-bg;
+    color: $light-bg;
     padding: 15px;
     font-size: 0.85rem;
     position: absolute;
@@ -141,7 +141,6 @@
     font-size: 0.9rem;
     line-height: 1.4;
     color: inherit; 
-    border-top: 1px solid rgba(255, 255, 255, 0.1); 
     text-align: left;
 
     strong {
@@ -173,8 +172,8 @@
 }
 
 .carousel_nav_btn {
-    background-color: var(--overlay-bg);
-    color:var(--card-bg);
+    background-color: $overlay-bg;
+    color: $card-bg;
     border: 1px solid #444;
     cursor: pointer;
     width: 40px;
@@ -186,7 +185,7 @@
     flex-shrink: 0;
     
     &:hover {
-        background-color: var(--accent-red);
+        background-color: $accent-red;
     }
 }
 
@@ -200,7 +199,7 @@
     h1 {
         font-size: 1.1rem;
         margin: 0;
-        color: var(--text-white);
+        color: $text-white;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -209,7 +208,7 @@
 
 .movie-card {
     width: 100%;
-    background: var(--card-bg);
+    background: $card-bg;
     border-radius: 4px;
     overflow: hidden;
     position: relative;
@@ -226,8 +225,8 @@
     position: absolute;
     top: 10px;
     left: 0;
-    background: var(--accent-red);
-    color: white;
+    background: $accent-red;
+    color: $light-bg;
     padding: 2px 8px;
     font-size: 0.75rem;
     font-weight: bold;
@@ -238,7 +237,7 @@
     display: flex;
     justify-content: space-between;
     padding: 12px;
-    background: #4a0404;
+    background: $dark-red-bg;
     font-size: 0.75rem;
     cursor: pointer;
 }

@@ -24,7 +24,7 @@
   "homepage": "https://github.com/LatifaBik/Kino_Webbsajt#readme",
   "devDependencies": {
     "husky": "^9.1.7",
-    "sass": "^1.97.0",
+    "sass": "^1.97.1",
     "vite": "^7.3.0"
   },
   "dependencies": {

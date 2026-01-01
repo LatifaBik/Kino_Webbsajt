@@ -1,7 +1,6 @@
-@use '../lib/variables_mixins' as *;
-
-
- .footer {
+@use '../lib/variables_mixins' as *; 
+ 
+.footer {
   &__container {
   display: flex;
   flex-direction: column;
@@ -25,8 +24,6 @@
     margin: 0rem;
   }
 }
-
-
 .footer {
   &__section--about  {
     width: 100%;
@@ -64,8 +61,7 @@
   }
    &__terms a {
     color: inherit;
-   text-decoration: underline;
-   
+   text-decoration: underline;  
   }
 }
 
@@ -108,8 +104,6 @@
      &__icons a {
       color: inherit;
       text-decoration: none;
-     
-      
     }
   }
 

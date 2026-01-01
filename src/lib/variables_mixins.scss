@@ -21,3 +21,10 @@ $toggle-on:    #FFF700;
 $toggle-off:   #707070;
 $toggle-bg:    #000000;
 
+//MIXINS
+
+@mixin small-screen {
+    @media screen and (max-width: 510px) {
+        @content;
+    }
+}

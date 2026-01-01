@@ -6,7 +6,7 @@ body {
   color: $dark-text;
 }
 
-/* LIGHT MODE */
+/*light-mode*/
 body.light {
   background: $light-bg;
   color: $light-text;
@@ -74,9 +74,27 @@ body.light &__top {
 }
 /* LIGHT mode */
 body.light &__menu-button { 
-   background: $light-bg;
+   background: transparent;
   color: $light-button;
 }
+
+
+&__login-btn {
+    background: transparent;
+    color: $dark-text;
+  }
+  body.light &__login-btn { 
+   background: transparent;
+  color: $light-button;
+}
+
+.open-register {
+  background: transparent;
+  color: $dark-text;
+}
+   body.light .open-register {
+    color: $dark-text; 
+  }
 
 &__nav-close {
   background: transparent;
@@ -103,11 +121,13 @@ body.light &__nav a {
 
   &__top img,
 &__nav img {
-  height: 45px;
-  width: auto;
+  height:45px;
+  width: 100%;
   object-fit: contain;
+  max-width: 270px;
+  padding: 0rem 5rem 3rem;
 }
- 
+
 &__nav img { padding-top: 4rem;}
 
 
@@ -128,10 +148,6 @@ body.light &__nav-logolight { display: none; }
 }
 
  
-
-
-
-
 /* FOOTER - dark mode */
 .footer__content {
   background: $dark-footer;

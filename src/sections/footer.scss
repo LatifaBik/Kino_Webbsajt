@@ -1,5 +1,6 @@
- @use '../lib/variables_mixins.scss' as *;
- .footer {
+@use '../lib/variables_mixins' as *; 
+ 
+.footer {
   &__container {
   display: flex;
   flex-direction: column;

@@ -1,8 +1,5 @@
 // anvandare-egen-sida.js
 
-
-
-// auth.js (eller i member-page.js)
 export function initAuthButtons() {
     const loginBtn = document.querySelector(".header__login--btn");
     const logoutBtn = document.querySelector(".header__logout--btn");
@@ -18,13 +15,11 @@ export function initAuthButtons() {
     });
   };
 
-
-
 export function initMemberPage() {
   const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
 
   // blockera om INTE inloggad
- if (!isLoggedIn) {
+if (!isLoggedIn) {
     window.location.href = 'index.html';
     return;
   }
@@ -44,5 +39,6 @@ export function initMemberPage() {
     alert('Review submitted!');
   });
 }
+
 
 

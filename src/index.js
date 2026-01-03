@@ -1,11 +1,14 @@
-import { fetchMovies } from "./scripts/api.js";
-import { renderMovieList } from "./scripts/createcard.js";
-import { openTrailer } from "./scripts/trailermodal.js"; 
-
 import './sections/main.scss';
-import './sections/footer.scss';
-import './scripts/menu.js';
-import './scripts/register.js';
+
+import { fetchMovies } from './scripts/api.js';
+import { renderMovieList } from './scripts/createcard.js';
+import { openTrailer } from './scripts/trailermodal.js'; 
+
+
+import {initMemberPage } from './scripts/member-page.js';
+initMemberPage();
+import {initAuthButtons} from './scripts/member-page.js';
+initAuthButtons();
 
 
 import { toggleLogin } from './scripts/login.js';

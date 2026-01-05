@@ -5,8 +5,8 @@ import { initMemberPage } from '../scripts/member-page.js';
 if (document.querySelector('.members__offers')) {
   initMemberPage();
 }
-import {initAuthButtons} from '../scripts/member-page.js';
-initAuthButtons();
+import {initMemberButtons} from '../scripts/member-page.js';
+initMemberButtons();
 
 
 import { toggleLogin } from '../scripts/login.js';

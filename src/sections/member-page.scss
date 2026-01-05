@@ -27,7 +27,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 1rem;
+        padding: 1em;
             bottom: 10px;
         }
     
@@ -42,10 +42,21 @@ body {
     }
     &__auth {
         display: flex;
-        align-items: center;
+        align-items:flex-end;
     }
 
-    &__login--btn {
+     &__member-btn {
+        background: transparent;
+        color: #fff;
+        border: none;
+        padding: 0.6rem 1rem;
+        margin-right: 2rem;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        cursor: pointer;
+        text-transform: uppercase;
+
+    &__login-btn {
         background: transparent;
         color: #fff;
         border: none;
@@ -54,7 +65,7 @@ body {
         cursor: pointer;
         text-transform: uppercase;
     } 
-     &__logout--btn {
+     &__logout-btn {
         background: transparent;
         color: #fff;
         border: none;
@@ -63,6 +74,7 @@ body {
         cursor: pointer;
         text-transform: uppercase;
   }
+}
 }
 
 .members__offers {

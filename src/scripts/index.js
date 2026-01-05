@@ -1,25 +1,12 @@
-// src/scripts/index.js
-
-console.log("✅ index.js loaded");
-
 import { fetchMovies } from "./api.js";
 import { renderMovieList } from "./createcard.js";
 import { openTrailer } from "./trailermodal.js";
 import { toggleTheme, closeBanner } from "./tema.js";
-
-// Styles: vi importerar bara "main.scss" som i sin tur @use:ar footer osv.
 import "../sections/main.scss";
-
-// UI
 import { toggleLogin } from "./login.js";
 import { toggleRegister } from "./register.js";
 import { toggleMenu } from "./menu.js";
 import { closeNotice } from "./notice.js";
-
-// Valfritt (bara om du har dessa moduler och använder dem i HTML)
-// import { toggleTheme, closeBanner } from "./tema.js";
-// import { movieCarousel } from "./carousel.js";
-// import { changeHeroSlide } from "./movieEventSlider.js";
 
 function parseDate(dateStr) {
   if (!dateStr) return null;
@@ -58,27 +45,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.warn("UI init warning:", e);
   }
 
-  // Valfritt theme/banner
-  // try {
-  //   closeBanner?.();
-  //   toggleTheme?.();
-  // } catch (e) {
-  //   console.warn("Theme/banner init warning:", e);
-  // }
-
-  // Valfritt hero-carousel
-  // try {
-  //   await movieCarousel?.();
-  //   changeHeroSlide?.(0);
-  //   const heroPrev = document.querySelector(".carousel_control.prev");
-  //   const heroNext = document.querySelector(".carousel_control.next");
-  //   if (heroPrev && heroNext) {
-  //     heroPrev.addEventListener("click", () => changeHeroSlide(-1));
-  //     heroNext.addEventListener("click", () => changeHeroSlide(1));
-  //   }
-  // } catch (e) {
-  //   console.warn("Carousel init warning:", e);
-  // }
 
   const currentTrack = document.getElementById("currentMoviesTrack");
   const comingSoonTrack = document.getElementById("comingSoonTrack");
@@ -107,7 +73,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     return;
   }
 
-  // Trailer-knapp (delegation)
   document.body.addEventListener("click", (e) => {
     const btn = e.target.closest(".movies-carousel__button");
     if (!btn) return;

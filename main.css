@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @charset "UTF-8";
 /* variables-mixins.scss */
 /* Dark mode palette */
@@ -444,26 +443,17 @@ body.light .header__theme-btn--light {
 }
 
 .footer__container {
-  background-color: #161313;
-  color: #e0e0e0;
-  padding-top: 15px;
-  border-radius: 40px 40px 0 0;
-  margin-top: 20px;
-=======
-.footer__container {
   display: flex;
   flex-direction: column;
   background-color: #161313;
   color: #fff;
   font-size: 1.1rem;
   font-family: sans-serif;
->>>>>>> dev
 }
 .footer__content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-<<<<<<< HEAD
   padding-bottom: 10px;
 }
 .footer__section {
@@ -652,7 +642,6 @@ body.light .header__nav-logo {
 
 body.light .header__nav-logolight {
   display: inline-block;
-=======
   align-items: flex-start;
   gap: 0.1rem;
 }
@@ -782,7 +771,6 @@ body.light .header__nav-logolight {
   cursor: pointer;
   font-size: 0.8rem;
   white-space: nowrap;
->>>>>>> dev
 }
 
 /*# sourceMappingURL=main.css.map */

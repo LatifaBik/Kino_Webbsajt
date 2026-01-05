@@ -1,24 +1,29 @@
-import './sections/main.scss';
+import "./sections/main.scss";
 
-import { fetchMovies } from './scripts/api.js';
-import { renderMovieList } from './scripts/createcard.js';
-import { openTrailer } from './scripts/trailermodal.js'; 
+import { initMemberPage } from '../scripts/member-page.js';
 
-
-import {initMemberPage } from './scripts/member-page.js';
-initMemberPage();
-import {initAuthButtons} from './scripts/member-page.js';
+if (document.querySelector('.members__offers')) {
+  initMemberPage();
+}
+import {initAuthButtons} from '../scripts/member-page.js';
 initAuthButtons();
 
 
-import { toggleLogin } from './scripts/login.js';
+import { toggleLogin } from '../scripts/login.js';
 toggleLogin();
-import { toggleRegister } from './scripts/register.js';
+import { toggleRegister } from '../scripts/register.js';
 toggleRegister();
-import { toggleMenu } from './scripts/menu.js'; 
+import { toggleMenu } from '../scripts/menu.js'; 
 toggleMenu(); 
-import { closeNotice } from './scripts/notice.js';
+import { closeNotice } from '../scripts/notice.js';
 closeNotice();
+import { toggleTheme } from '../scripts/tema.js';
+toggleTheme();
+
+import { fetchMovies } from "../scripts/api.js";
+import { renderMovieList } from "../scripts/createcard.js";
+import { openTrailer } from "../scripts/trailermodal.js"; 
+
 
 
 function parseDate(dateStr) {

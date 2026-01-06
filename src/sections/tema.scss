@@ -87,6 +87,14 @@ body.light &__menu-button {
    background: transparent;
   color: $light-button;
 }
+&__member-btn {
+    background: transparent;
+    color: $dark-text;
+  }
+  body.light &__member-btn { 
+   background: transparent;
+  color: $light-button;
+}
 
 .open-register {
   background: transparent;

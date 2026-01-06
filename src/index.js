@@ -1,4 +1,14 @@
 import "./sections/main.scss";
+
+import { initMemberPage } from '../scripts/member-page.js';
+
+if (document.querySelector('.members__offers')) {
+  initMemberPage();
+}
+import {initMemberButtons} from '../scripts/member-page.js';
+initMemberButtons();
+
+
 import { toggleLogin } from '../scripts/login.js';
 toggleLogin();
 import { toggleRegister } from '../scripts/register.js';

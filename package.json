@@ -4,10 +4,10 @@
   "description": "Uppgiften går ut på att i grupp planera, strukturera och påbörja utvecklingen av en biograf-webbsajt enligt Scrum-metodik.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
     "sass-watch": "sass --watch src/main.scss:css/main.css",
     "prepare": "husky"
   },
@@ -24,7 +24,7 @@
   "homepage": "https://github.com/LatifaBik/Kino_Webbsajt#readme",
   "devDependencies": {
     "husky": "^9.1.7",
-    "sass": "^1.97.0",
+    "sass": "^1.97.1",
     "vite": "^7.3.0"
   },
   "dependencies": {

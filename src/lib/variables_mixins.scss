@@ -1,13 +1,4 @@
 /* variables-mixins.scss */
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@mixin transition-standard {
-    transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
 
 /* Dark mode palette */
 $dark-bg:      #1A0000;
@@ -30,16 +21,22 @@ $toggle-on:    #FFF700;
 $toggle-off:   #707070;
 $toggle-bg:    #000000;
 
-$bg-color: #0d0404;
-$card-bg: #1a0808;
-$accent-red: #8b0000;
-$text-white: #e0e0e0;
-$text-muted: #aaa;
-$banner: #E3E6B5;
-$overlay-bg: rgba(0, 0, 0, 0.75);
-$footer-bg: #161313;
-$dark-red-bg: #4a0404;
+//MIXINS
 
+@mixin small-screen {
+    @media screen and (max-width: 510px) {
+        @content;
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin transition-standard {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
 
 /* Carousel Variables*/
 $event-gap: 15px;
@@ -50,3 +47,4 @@ $mobile-breakpoint: 768px;
 /*Bistro*/
 $bistro-radius: 20px;
 $bistro-dark: #2e2e2e;
+

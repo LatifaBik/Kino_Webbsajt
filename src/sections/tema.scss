@@ -1,0 +1,218 @@
+@use '../lib/variables_mixins' as *;
+
+/* DEFAULT = DARK MODE */
+body {
+  background: $dark-bg;
+  color: $dark-text;
+}
+
+/*light-mode*/
+body.light {
+  background: $light-bg;
+  color: $light-text;
+}
+
+.header {
+  &__theme-btn {
+    position: fixed;
+    background: transparent;
+    box-shadow: none;
+     border: none;
+    border-radius: 6rem;
+    top: 2.5rem;
+    right: 4rem;
+    z-index: 5;
+    display: flex;
+    gap: 0.5rem;
+  }
+  &__theme {
+  background: transparent;   
+  box-shadow: none;          
+  border: none;
+  }
+
+  &__theme-btn--light,
+  &__theme-btn--dark {
+    width: 2rem;
+    height: 2rem; 
+    border: none; 
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    padding: 0;
+  }
+  &__theme-icon {
+    width: 3.5rem;
+    height: 1.5rem;
+    display: block;
+  }
+
+/* default = DARK: visa light-knappen (månen) och göm dark-knappen (solen) */
+&__theme-btn--light { display: inline-grid; }
+&__theme-btn--dark { display: none; }
+
+/* LIGHT mode: visa “till dark” (måne), göm “till light” (sol) */
+body.light &__theme-btn--light { display: none; }
+body.light &__theme-btn--dark { display: inline-grid; }
+
+
+
+&__top {
+   background: $dark-bg;
+  color: $light-text;
+}
+/* LIGHT mode */
+body.light &__top {
+ background: $light-bg;
+  color: $dark-text;
+}
+/* DARK mode */
+&__menu-button {
+  background: transparent;
+  color: $dark-text;
+ 
+}
+/* LIGHT mode */
+body.light &__menu-button { 
+   background: transparent;
+  color: $light-button;
+}
+
+
+&__login-btn {
+    background: transparent;
+    color: $dark-text;
+  }
+  body.light &__login-btn { 
+   background: transparent;
+  color: $light-button;
+}
+&__member-btn {
+    background: transparent;
+    color: $dark-text;
+  }
+  body.light &__member-btn { 
+   background: transparent;
+  color: $light-button;
+}
+
+.open-register {
+  background: transparent;
+  color: $dark-text;
+}
+   body.light .open-register {
+    color: $dark-text; 
+  }
+
+&__nav-close {
+  background: transparent;
+  color: $dark-text;
+}
+/* LIGHT mode */
+body.light &__nav-close {
+  background: transparent;
+  color: $light-button;
+}
+
+body.light &__nav {
+  background: $light-menu;
+}
+/* DARK */
+body.dark {
+  .header__nav a { color: $dark-text; }
+}
+
+/* LIGHT */
+body.light &__nav a {
+  color: $dark-bg;      
+}
+
+  &__top img,
+&__nav img {
+  height:45px;
+  width: 100%;
+  object-fit: contain;
+  max-width: 270px;
+  padding: 1rem 18rem 3rem;
+}
+
+&__nav img { padding-top: 4rem;}
+
+
+/* default (dark): visa light, göm dark */
+&__logo-dark,
+&__nav-logodark { display: none; }
+
+&__logo-light,
+&__nav-logolight { display: inline-flex; }
+
+/* light mode: visa dark, göm lighr */
+body.light &__logo-dark,
+body.light &__nav-logodark { display: inline-flex; }
+
+body.light &__logo-light,
+body.light &__nav-logolight { display: none; }
+
+}
+
+ 
+/* FOOTER - dark mode */
+.footer__content {
+  background: $dark-footer;
+  color: $dark-text;
+}
+
+.footer__content a {
+  color: $dark-text;
+}
+
+/* FOOTER - light mode */
+body.light .footer__content {
+  background: $light-footer;
+  color: $light-text;
+}
+
+body.light .footer__content a {
+  color: $light-text;
+}
+
+/* ===== LOGO TOGGLE (works with multiple class variants) ===== */
+
+/* dark default */
+.header__logo-dark,
+.header__nav-logodark,
+.header__logo-dark,
+.header__nav-logodark {
+  display: none;
+}
+
+.header__logo-light,
+.header__nav-logolight,
+.header__logo-light,
+.header__nav-logolight {
+  display: inline-block;
+}
+
+/* light mode */
+body.light .header__logo-dark,
+body.light .header__nav-logodark,
+body.light .header__logo-dark,
+body.light .header__nav-logodark {
+  display: inline-block;
+}
+
+body.light .header__logo-light,
+body.light .header__nav-logolight,
+body.light .header__logo-light,
+body.light .header__nav-logolight {
+  display: none;
+}
+
+
+
+
+
+
+
+
+

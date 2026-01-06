@@ -12,14 +12,14 @@
   &__backdrop {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.7); 
+    background: $dark-bg; 
   }
 
   &__content {
     position: relative;
     max-width: 900px;
     margin: 5vh auto;
-    background: #000;
+    background: $dark-bg;
     padding: 1rem;
     z-index: 1;
   }
@@ -30,7 +30,7 @@
     right: 0.5rem;
     background: none;
     border: none;
-    color: #fff;
+    color: $dark-text;
     font-size: 1.5rem;
     cursor: pointer;
   }

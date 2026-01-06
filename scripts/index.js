@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 console.error("Could not parse Video ID from URL:", trailerUrl);
             }
         }
-    }
+    }git
     }, { passive: true });
 
     try {

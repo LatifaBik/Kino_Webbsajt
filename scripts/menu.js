@@ -1,18 +1,21 @@
-// Menu
+
 
 export function toggleMenu() {
-
   const menuButton = document.querySelector('.header__menu-button');
-  const navContainer = document.querySelector('.header__nav');
+  const nav = document.querySelector('.header__nav');
   const closeButton = document.querySelector('.header__nav-close');
 
-  if (menuButton && navContainer && closeButton) {
-    menuButton.addEventListener('click', () => {
-      navContainer.classList.add('header__nav--active');
-    });
+  if (!menuButton || !nav) return;
 
+  menuButton.addEventListener('click', () => {
+    nav.classList.add('header__nav--active');
+    document.body.style.overflow = 'hidden'; 
+  });
+
+  if (closeButton) {
     closeButton.addEventListener('click', () => {
-      navContainer.classList.remove('header__nav--active');
+      nav.classList.remove('header__nav--active');
+      document.body.style.overflow = ''; 
     });
   }
 }

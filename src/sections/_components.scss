@@ -1,0 +1,288 @@
+@use '../lib/variables_mixins' as *;
+
+//  Carousel 
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 450px;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    
+    &_slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 0.8s;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 40px;
+        pointer-events: none;
+        
+        &.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+    
+    &_control {
+        background: $dark-bg;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    
+    &_controls_bottom {
+
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+        gap: 10px;
+        z-index: 1;
+        
+        i {
+            padding-top: 8px;
+            font-size: 12px;
+            cursor: pointer;
+            width: 24px;
+            height: 18px;
+        }
+    }
+}
+
+/* Container for the events */
+#eventsTrack {
+    display: flex;
+    gap: $event-gap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    // Nesting the card inside the track
+    .event_card {
+        flex: 0 0 calc(33.33% - 10px);
+        max-width: calc(33.33% - 10px);
+        aspect-ratio: 2 / 3;
+
+        // Nesting the image inside the card
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: $border-radius;
+            transition: transform 0.3s ease; // Added a nice hover effect hint
+
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+        @media (max-width: $mobile-breakpoint) {
+            flex: 0 0 calc(50% - 10px);
+            max-width: calc(50% - 10px);
+        }
+        
+        // Mobile small
+        @media (max-width: 480px) {
+             flex: 0 0 calc(80% - 10px);
+             max-width: calc(80% - 10px);
+        }
+    }
+}
+.slide_content {
+    pointer-events: auto;
+    z-index: 2;
+    text-align: center;
+}
+
+.movie-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-details-content {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 15px;
+    font-size: 0.85rem;
+    position: absolute;
+    bottom: 40px; // Sits above the footer
+    left: 0;
+    right: 0;
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+    border-top: 2px solid $bg-color;
+}
+
+.details-btn {
+    background: transparent;
+    color: inherit;               
+    padding: 2px 4px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    transition: opacity 0.3s;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+
+.movie-details-content {
+    padding: 15px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: inherit; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    text-align: left;
+
+    strong {
+        color: inherit;
+        opacity: 0.8; 
+    }
+}
+
+// Movie Tracks 
+.movies_carousel_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.movies_carousel_track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    scrollbar-width: none;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.carousel_nav_btn {
+    background-color: var(--overlay-bg);
+    color:var(--card-bg);
+    border: 1px solid #444;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    
+    &:hover {
+        background-color: var(--accent-red);
+    }
+}
+
+// Movie Wrapper & Card
+.movie-wrapper {
+    flex: 0 0 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+    h1 {
+        font-size: 1.1rem;
+        margin: 0;
+        color: var(--text-white);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.movie-card {
+    width: 100%;
+    background: var(--card-bg);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.day-label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: var(--accent-red);
+    color: white;
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background: #4a0404;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.bistro-section {
+    text-align: center;
+    margin-bottom: 60px;
+
+    .bistro-banner {
+        background-color: $banner;
+        color: $light-banner;
+        border-radius: $bistro-radius;
+        padding: 60px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+
+        .bistro-logo {
+            flex: 1;
+            text-align: left;
+
+            h1 {
+                font-size: 5rem;
+                margin: 0;
+                color: $bistro-dark;
+            }
+
+            .kino-text {
+                font-family: serif;
+                font-size: 6rem;
+                letter-spacing: 5px;
+                line-height: 0.8;
+                font-weight: bold;
+            }
+        }
+
+        .bistro-menu-list {
+            flex: 1;
+            text-align: right;
+            font-weight: bold;
+            font-size: 1.8rem;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+    }
+}

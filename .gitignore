@@ -1,2 +1,5 @@
+src/*.scss
+src/*.sass 
+*main.css.map
 node_modules/
 *.map

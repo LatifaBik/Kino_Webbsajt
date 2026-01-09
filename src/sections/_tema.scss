@@ -12,31 +12,29 @@
     border: none;
     cursor: pointer;
   }
-  
+
   &__theme {
     box-shadow: none;
     border: none;
-    background: $dark-bg;
+    background: rgba(0,0,0,0.4);
+    border-radius: 2rem; 
   }
-  
+
   &__theme-btn--light,
   &__theme-btn--dark {
-    width: 2.8rem;
-    height: 2.8rem; 
+    width: 2.5rem;
+    height: 2.5rem; 
     border: none;
     background: transparent;
     display: grid;
     place-items: center;
     padding: 0;
-    margin-top: 2.5rem;
-    
   }
-  
+
   &__theme-icon {
-    width: 4.5rem; 
+    width: 4rem; 
     height: 3rem;
     object-fit: contain;
-    border-radius: 600px; 
   }
 }
 

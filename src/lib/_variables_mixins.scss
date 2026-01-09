@@ -7,7 +7,11 @@
 @mixin transition-standard {
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
-
+@mixin small-screen {
+    @media screen and (max-width: 510px) {
+        @content;
+    }
+}
 
 /* Dark mode palette */
 $dark-bg:      #1A0000;
@@ -45,6 +49,11 @@ $dark-red-bg: #4a0404;
 $event-gap: 15px;
 $border-radius: 8px;
 $mobile-breakpoint: 768px;
+
+$gap-sm: 8px;
+$gap-md: 16px;
+$btn-bg: #350000;
+$btn-text: #ffffff;
 
 
 /*Bistro*/

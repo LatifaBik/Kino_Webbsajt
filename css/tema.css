@@ -1,0 +1,223 @@
+@charset "UTF-8";
+/* variables-mixins.scss */
+/* Dark mode palette */
+/* Light mode palette */
+/* Toggle colors */
+/* Carousel Variables*/
+/*Bistro*/
+/* DEFAULT = DARK MODE */
+body {
+  background: #1A0000;
+  color: #FFFFFF;
+}
+
+/*light-mode*/
+body.light {
+  background: #EDEDED;
+  color: #000000;
+}
+
+.header__theme-btn {
+  position: fixed;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  border-radius: 6rem;
+  top: 2.5rem;
+  right: 4rem;
+  z-index: 5;
+  display: flex;
+  gap: 0.5rem;
+}
+.header__theme {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+.header__theme-btn--light, .header__theme-btn--dark {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+.header__theme-icon {
+  width: 3.5rem;
+  height: 1.5rem;
+  display: block;
+}
+.header {
+  /* default = DARK: visa light-knappen (månen) och göm dark-knappen (solen) */
+}
+.header__theme-btn--light {
+  display: inline-grid;
+}
+.header__theme-btn--dark {
+  display: none;
+}
+.header {
+  /* LIGHT mode: visa “till dark” (måne), göm “till light” (sol) */
+}
+body.light .header__theme-btn--light {
+  display: none;
+}
+body.light .header__theme-btn--dark {
+  display: inline-grid;
+}
+.header__top {
+  background: #1A0000;
+  color: #000000;
+}
+.header {
+  /* LIGHT mode */
+}
+body.light .header__top {
+  background: #EDEDED;
+  color: #FFFFFF;
+}
+.header {
+  /* DARK mode */
+}
+.header__menu-button {
+  background: transparent;
+  color: #FFFFFF;
+}
+.header {
+  /* LIGHT mode */
+}
+body.light .header__menu-button {
+  background: transparent;
+  color: #350000;
+}
+.header__login-btn {
+  background: transparent;
+  color: #FFFFFF;
+}
+body.light .header__login-btn {
+  background: transparent;
+  color: #350000;
+}
+.header__member-btn {
+  background: transparent;
+  color: #FFFFFF;
+}
+body.light .header__member-btn {
+  background: transparent;
+  color: #350000;
+}
+.header .open-register {
+  background: transparent;
+  color: #FFFFFF;
+}
+.header body.light .open-register {
+  color: #FFFFFF;
+}
+.header__nav-close {
+  background: transparent;
+  color: #FFFFFF;
+}
+.header {
+  /* LIGHT mode */
+}
+body.light .header__nav-close {
+  background: transparent;
+  color: #350000;
+}
+body.light .header__nav {
+  background: #E8E3E3;
+}
+.header {
+  /* DARK */
+}
+.header body.dark .header__nav a {
+  color: #FFFFFF;
+}
+.header {
+  /* LIGHT */
+}
+body.light .header__nav a {
+  color: #1A0000;
+}
+.header__top img, .header__nav img {
+  height: 45px;
+  width: 100%;
+  object-fit: contain;
+  max-width: 270px;
+  padding: 1rem 18rem 3rem;
+}
+.header__nav img {
+  padding-top: 4rem;
+}
+.header {
+  /* default (dark): visa light, göm dark */
+}
+.header__logo-dark, .header__nav-logodark {
+  display: none;
+}
+.header__logo-light, .header__nav-logolight {
+  display: inline-flex;
+}
+.header {
+  /* light mode: visa dark, göm lighr */
+}
+body.light .header__logo-dark, body.light .header__nav-logodark {
+  display: inline-flex;
+}
+body.light .header__logo-light, body.light .header__nav-logolight {
+  display: none;
+}
+
+/* FOOTER - dark mode */
+.footer__content {
+  background: #161313;
+  color: #FFFFFF;
+}
+
+.footer__content a {
+  color: #FFFFFF;
+}
+
+/* FOOTER - light mode */
+body.light .footer__content {
+  background: #C5C5C5;
+  color: #000000;
+}
+
+body.light .footer__content a {
+  color: #000000;
+}
+
+/* ===== LOGO TOGGLE (works with multiple class variants) ===== */
+/* dark default */
+.header__logo-dark,
+.header__nav-logodark,
+.header__logo-dark,
+.header__nav-logodark {
+  display: none;
+}
+
+.header__logo-light,
+.header__nav-logolight,
+.header__logo-light,
+.header__nav-logolight {
+  display: inline-block;
+}
+
+/* light mode */
+body.light .header__logo-dark,
+body.light .header__nav-logodark,
+body.light .header__logo-dark,
+body.light .header__nav-logodark {
+  display: inline-block;
+}
+
+body.light .header__logo-light,
+body.light .header__nav-logolight,
+body.light .header__logo-light,
+body.light .header__nav-logolight {
+  display: none;
+}
+
+/*# sourceMappingURL=tema.css.map */

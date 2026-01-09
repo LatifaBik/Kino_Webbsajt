@@ -36,7 +36,7 @@
         line-height: 2;
         
         a {
-            color: $text-muted;
+            color: var(--text-muted);
             text-decoration: none;
         }
     }
@@ -48,7 +48,7 @@
     font-size: 1.5rem;
     
     a {
-        color: $text-white;
+        color: var(--text-white);
     }
 }
 
@@ -65,7 +65,7 @@
     }
     
     &__submit {
-        background-color: $accent-red;
+        background-color: var(--accent-red);
         color: $text-white;
         border: none;
         padding: 0.6rem;
@@ -73,45 +73,5 @@
         cursor: pointer;
         font-weight: bold;
         border: 1px solid $text-white;
-    }
-}
-
-body.light {
-    // ... (previous light mode styles for header and nav)
-
-    // Footer Light Mode Styles
-    .footer__container {
-        background-color: $light-footer !important;
-        color: $light-text !important; // Explicit black as requested
-
-        // Target all headings inside the footer
-        h3 {
-            color: $light-text !important;
-        }
-
-        // Target links and list items
-        .footer__links li,
-        .footer__links li a,
-        .footer__info li,
-        .footer__info li i {
-            color: $light-text !important;
-        }
-
-        // Newsletter section adjustments
-        .newsletter__input {
-            background-color: $dark-text;
-            border: 1px solid $light-bg;
-            color: #000000;
-        }
-
-        .newsletter__submit {
-            background-color: $light-text;
-            color: $dark-text;
-        }
-
-        // Social media icons
-        .social a i {
-            color: $light-text !important;
-        }
     }
 }

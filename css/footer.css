@@ -1,0 +1,149 @@
+/* variables-mixins.scss */
+/* Dark mode palette */
+/* Light mode palette */
+/* Toggle colors */
+/* Carousel Variables*/
+/*Bistro*/
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  background-color: #161313;
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+}
+.footer__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 0.1rem;
+}
+.footer__section {
+  flex: 1 1 120px;
+  padding: 0.1rem 3rem 0rem;
+  margin: 0rem;
+}
+
+.footer__section--about {
+  width: 100%;
+}
+.footer__about {
+  flex: 1 1 220px;
+  padding: 1rem 2rem 0rem;
+}
+.footer__links {
+  font-size: 0.8rem;
+  color: #FFFFFF;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__links a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.footer__section--other {
+  width: 100%;
+}
+.footer__other {
+  flex: 1 1 220px;
+  padding: 1rem 4rem 0rem;
+}
+.footer__terms {
+  font-size: 0.8rem;
+  color: #FFFFFF;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__terms a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.footer__section--contact {
+  width: 100%;
+}
+.footer__contact {
+  flex: 1 1 220px;
+  padding: 1rem 4rem 0rem;
+}
+.footer__info {
+  font-size: 0.8rem;
+  color: #FFFFFF;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__info a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.footer__section--social {
+  width: 100%;
+  margin-top: -2rem;
+}
+.footer__social {
+  flex: 1 1 220px;
+  padding: 1rem 4rem 2rem;
+}
+.footer__icons {
+  color: #FFFFFF;
+  gap: 2rem;
+  font-size: 2.5rem;
+}
+.footer__icons a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer__section--extra {
+  flex: 0 0 100%;
+  width: 100%;
+  padding: 1rem 2rem 2rem;
+}
+.footer__extra {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+.footer__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 420px;
+  flex-wrap: nowrap;
+}
+
+.newsletter {
+  display: block;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.newsletter__input {
+  padding: 0.5rem;
+  width: 8rem;
+  max-width: 100%;
+  border: none;
+  border-radius: 8px;
+}
+.newsletter__submit {
+  background-color: #350000;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=footer.css.map */

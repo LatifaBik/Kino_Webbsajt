@@ -1,7 +1,7 @@
 @use "sass:color";
 @use '../lib/variables_mixins' as *;
 
-
+// --- 1. GLOBAL THEME (Dark Mode Default) ---
 body {
     background-color: $dark-bg;
     color: $text-white; // All text becomes white by default
@@ -12,115 +12,27 @@ h1, h2, .section_title, .film_title {
 }
 
 .header {
-    background-color: $dark-bg;
-    position: relative;
-
     &__top {
-        padding: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
+        padding: 10px 15px;
+        border-bottom: 3px solid $text-muted;
+        border-radius: 0 0 20px 20px;
+        color: $text-white; // Default white
 
-    &__logo {
-        display: block; // Show dark-theme logo
-        height: 79px;
-        object-fit: contain;
-    }
-
-    &__logo-light {
-        display: none; // Hide light-theme logo
+        @media (min-width: 768px) {
+            padding: 10px 40px;
+        }
     }
 
     &__menu-button {
-        background: transparent;
-        border: none;
-        padding: 0;
-        color: $dark-text;
-        font-size: 1.6rem;
+        background-color: transparent;
         border: none;
         cursor: pointer;
-
-        &:focus, &:active {
-            outline: none;
-            background: transparent;
-        }
+        font-weight: bold;
+        color: inherit; 
     }
-
-    &__nav {
-        opacity: 0;
-        visibility: hidden;
-        transform: scale(0.95);
-        transition: opacity 0.4s ease, transform 0.4s ease;
-        position: fixed;
-        background-color: $dark-bg;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 3;
-        flex-direction: column;
-        justify-content: center;
-        animation: navfadeandscale .66s cubic-bezier(.53, .52, .04, 1.06) 0s 1 both;
-
-        &--active {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            opacity: 1;
-            visibility: visible;
-            transform: scale(1);
-           
-        }
-
-        &-logo {
-            position: absolute;
-            top: 3rem;
-            left: 52%;
-            transform: translateX(-50%);
-            max-width: 270px;
-        }
-
-        &-close {
-            position: absolute;
-            top: 2.5rem;
-            left: 1.1rem;
-            font-size: 2.3rem;
-            border: 0;
-            color: $dark-text;
-            cursor: pointer;
-            background: transparent;
-            
-        }
-
-        &-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center; // centrerar vertikalt
-            height: 100vh; // tar hela höjden på sidan
-            margin-top:10px;
-        }
-
-        &-item {
-            margin: 0.3rem 0;
-            font-size: 1.5rem;
-            width: 260px;
-            text-align: left;
-
-            a {
-                text-decoration: none;
-                color: $dark-text;
-            }
-        }
-    }
-}
-
-.close-menu {
-    font-size: 1rem;
-    
 }
 
 .auth-buttons span, 
@@ -134,42 +46,23 @@ body.light {
     background-color: $light-bg !important;
     color: $light-text !important;
 
-    .header__nav {
-        background-color: $light-bg !important; // This makes the menu white
-        
-        &-logo {
-            content: url('/images/logo1.png') !important;
-            
-            // Ensure the size remains consistent
-            position: absolute;
-            top: 3rem;
-            left: 50%; // Adjusted from 52% to 50% for perfect centering
-            transform: translateX(-50%);
-            max-width: 270px;
-        }
-
-        &-list .header__nav-item a {
-            color: $light-text !important; // This makes the text dark
-        }
-
-        &-close, 
-        .close-menu {
-            color: $light-text !important;
-            background: transparent !important; 
-        }
-    }
-
- 
+   
+    h1, h2, 
+    .section_title, 
+    .film_title,
+    .header__top,
     .header__menu-button,
     .auth-buttons span, 
     .auth-buttons a, 
-    .auth-buttons .btn_join,
-    .section_title,
-    h1, h2 {
+    .auth-buttons .btn_join {
         color: $light-text !important;
     }
 
-
+    .header__top {
+        border-bottom-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    // Logos
     .header__logo { display: none !important; }
     .header__logo-light { display: block !important; }
 }

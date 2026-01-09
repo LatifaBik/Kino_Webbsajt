@@ -1,10 +1,11 @@
-/* Error: expected ";".
- *    ,
- * 43 |     text-align: center;
- *    |               ^
- *    '
- *   src\sections\footer.scss 43:15  @use
- *   src\main.scss 1:1               root stylesheet */
+/* Error: It's not clear which file to import. Found:
+ *   src\sections\_tema.scss
+ *   src\sections\tema.scss
+ *   ,
+ * 2 | @use './tema.scss';
+ *   | ^^^^^^^^^^^^^^^^^^
+ *   '
+ *   src\sections\main.scss 2:1  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +15,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: expected ";".\a    \2577 \a 43 \2502      text-align: center;\d\a    \2502                ^\a    \2575 \a   src\\sections\\footer.scss 43:15  @use\a   src\\main.scss 1:1               root stylesheet';
+  content: "Error: It's not clear which file to import. Found:\a   src\\sections\\_tema.scss\a   src\\sections\\tema.scss\a   \2577 \a 2 \2502  @use './tema.scss';\a   \2502  ^^^^^^^^^^^^^^^^^^\a   \2575 \a   src\\sections\\main.scss 2:1  root stylesheet";
 }

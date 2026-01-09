@@ -1,8 +1,0 @@
-// main.scss (in root folder)
-
-@use './src/lib/variables_mixins' as *; // The 'as *' makes variables global
-@use 'src/sections/base';
-@use 'src/sections/header';
-@use 'src/sections/components';
-@use 'src/sections/footer';
-@use 'src/sections/tema';

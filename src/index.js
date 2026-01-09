@@ -23,6 +23,7 @@ toggleTheme();
 import { fetchMovies } from "../scripts/api.js";
 import { renderMovieList } from "../scripts/createcard.js";
 import { openTrailer } from "../scripts/trailermodal.js"; 
+import { movieCarousel } from "../scripts/carousel.js"; 
 
 
 
@@ -52,6 +53,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const movies = await fetchMovies();
+
+    movieCarousel(movies);
     const upcoming = movies.filter(isUpcoming);
     const current = movies.filter((m) => !isUpcoming(m));
 

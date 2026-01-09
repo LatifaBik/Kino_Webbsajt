@@ -559,6 +559,194 @@ body.light .header__nav-logolight {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding-bottom: 10px;
+}
+.footer__section {
+  flex: 1 1 200px;
+  padding: 1rem 2rem;
+}
+.footer__section h3 {
+  font-size: 1.6rem;
+}
+.footer__section ul li {
+  text-decoration: underline;
+  list-style: none;
+}
+.footer__links {
+  list-style: none;
+  padding: 0;
+  line-height: 2;
+}
+.footer__links a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.social {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+.social a {
+  color: var(--text-white);
+}
+
+.newsletter {
+  text-align: center;
+}
+.newsletter__input {
+  padding: 0.5rem;
+  width: 180px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+.newsletter__submit {
+  background-color: var(--accent-red);
+  color: #e0e0e0;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  border: 1px solid #e0e0e0;
+}
+
+/* DEFAULT = DARK MODE */
+body {
+  background: #1A0000;
+  color: #FFFFFF;
+}
+
+/* LIGHT MODE */
+body.light {
+  background: #EDEDED;
+  color: #000000;
+}
+
+.header__theme-btn {
+  position: fixed;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  border-radius: 6rem;
+  top: 1.1rem;
+  right: 4rem;
+  z-index: 5;
+  display: flex;
+  gap: 0.5rem;
+}
+.header__theme {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  background: rgba(0, 0, 0, 0.4);
+}
+.header__theme-btn--light, .header__theme-btn--dark {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+.header__theme-icon {
+  width: 5rem;
+  height: 2rem;
+  display: block;
+}
+
+/* default = DARK: visa light-knappen (månen) och göm dark-knappen (solen) */
+.header__theme-btn--dark {
+  display: none;
+}
+
+.header__theme-btn--light {
+  display: inline-grid;
+}
+
+/* LIGHT mode: visa “till dark” (måne), göm “till light” (sol) */
+body.light .header__theme-btn--dark {
+  display: inline-grid;
+}
+
+body.light .header__theme-btn--light {
+  display: none;
+}
+
+/* så img inte “stjäl” klick */
+/*.header__theme-icon { pointer-events: none; }
+
+
+/* tonDARK DEFAULT: (ingen klass) */
+/*.header_theme--dark  { background: $toggle-on; }
+.header_theme--light { background:$toggle-off; }
+
+.header_theme--dark i  { color: $toggle-bg; }
+.header_theme--light i { color: $toggle-off; }
+
+/* LIGHT MODE: när body.light finns */
+/*body.light .header_theme--light { background: $toggle-on; }
+body.light .header_theme--dark  { background: $toggle-off; }
+
+body.light .header_theme--light i { color: $toggle-bg; }
+body.light .header_theme--dark i  { color: $toggle-off; }
+
+/* DARK default */
+.footer__container {
+  background: #161313;
+  color: #FFFFFF;
+}
+
+/* LIGHT mode */
+body.light .footer__container {
+  background: #C5C5C5;
+  color: #000000;
+}
+
+body.light .footer__container a {
+  color: #000000;
+}
+
+body.light .header__nav {
+  background: #E8E3E3;
+}
+
+/* DARK */
+body.dark .header__nav a {
+  color: #FFFFFF;
+}
+
+/* LIGHT */
+body.light .header__nav a {
+  color: #1A0000;
+}
+
+/* default (dark)=> visar dark och gömmer light */
+.header__logo-light {
+  display: none;
+}
+
+/* light: byt */
+body.light .header__logo {
+  display: none;
+}
+
+body.light .header__logo-light {
+  display: inline-block;
+}
+
+.header__nav-logo-light {
+  display: none;
+}
+
+body.light .header__nav-logo {
+  display: none;
+}
+
+body.light .header__nav-logolight {
+  display: inline-block;
   align-items: flex-start;
   gap: 0.1rem;
 }

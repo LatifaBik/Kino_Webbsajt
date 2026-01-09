@@ -159,6 +159,7 @@
         background-color: $dark-bg;
         justify-content: center;
         align-items: center;
+        z-index: 100;
 
         &--active {
             display: flex;
@@ -222,6 +223,7 @@
         background-color: $dark-bg;
         justify-content: center;
         align-items: center;
+        z-index: 100;
 
         &--active {
             display: flex;

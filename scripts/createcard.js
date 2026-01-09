@@ -1,4 +1,4 @@
-export function createMovieCard(movie) {
+export function createMovieCard(movie, prefix = "movie") {
   const card = document.createElement("article");
   card.classList.add("movies-carousel__card");
   card.dataset.id = movie.id;
@@ -16,25 +16,33 @@ export function createMovieCard(movie) {
   actions.classList.add("movies-carousel__actions");
 
   const trailerBtn = document.createElement("button");
-  trailerBtn.classList.add("movies-carousel__button");
+  trailerBtn.classList.add("movies-carousel__button", "trailer-btn");
   trailerBtn.type = "button";
   trailerBtn.textContent = "Trailer";
   trailerBtn.dataset.id = movie.id;
 
   const detailsBtn = document.createElement("button");
-  detailsBtn.classList.add("movies-carousel__button");
+  //Added 'details-btn' class and 'data-prefix'
+  detailsBtn.classList.add("movies-carousel__button", "details-btn"); 
   detailsBtn.type = "button";
-  detailsBtn.textContent = "Detaljer";
+  detailsBtn.textContent = "Detaljer ▼";
   detailsBtn.dataset.id = movie.id;
+  detailsBtn.dataset.prefix = prefix;
+
+  // Create the hidden info div 
+  const detailsDiv = document.createElement("div");
+  detailsDiv.id = `${prefix}-details-${movie.id}`;
+  detailsDiv.classList.add("movie-details-info");
+  detailsDiv.style.display = "none";
+  detailsDiv.innerHTML = `<p>${movie.Overview || "Ingen beskrivning tillgänglig."}</p>`;
 
   actions.append(trailerBtn, detailsBtn);
-  card.append(img, title, actions);
+  card.append(img, title, actions, detailsDiv);
   return card;
 }
 
-export function renderMovieList(trackEl, list) {
+export function renderMovieList(trackEl, list, prefix = "movie") {
   if (!trackEl) return;
-
   trackEl.innerHTML = "";
 
   if (!list?.length) {
@@ -43,6 +51,6 @@ export function renderMovieList(trackEl, list) {
   }
 
   list.forEach((movie) => {
-    trackEl.appendChild(createMovieCard(movie));
+    trackEl.appendChild(createMovieCard(movie, prefix));
   });
 }

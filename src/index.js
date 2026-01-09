@@ -23,6 +23,7 @@ toggleTheme();
 import { fetchMovies } from "../scripts/api.js";
 import { renderMovieList } from "../scripts/createcard.js";
 import { openTrailer } from "../scripts/trailermodal.js"; 
+import { movieCarousel } from "../scripts/carousel.js"; 
 
 
 
@@ -52,12 +53,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const movies = await fetchMovies();
+
+    movieCarousel(movies);
     const upcoming = movies.filter(isUpcoming);
     const current = movies.filter((m) => !isUpcoming(m));
 
     // only shows 10 cards on landingpage, otherwise it will load almost infinite titles with our API
 
-    renderMovieList(currentTrack, current.slice(0, 10));
+    renderMovieList(currentTrack, current.slice(0, 20));
     renderMovieList(comingSoonTrack, upcoming.slice(0, 10));
     renderMovieList(eventsTrack, current.slice(0, 10)); // placeholder until we get API to show upcoming events, can change current to events
 

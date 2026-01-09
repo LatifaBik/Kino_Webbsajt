@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
 
+<html>
+
 <head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>KINO _ Movie Theater</title>
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font_awesome/6.4.0/css/all.min.css"> -->
+
+  <!--<link rel="stylesheet" href="main.css">-->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -20,7 +32,20 @@
   <button class="notice__close" type="button" aria-label="Stäng notis">&times;</button>
 </div>
 
+<!-- Info / notice bar -->
+<div class="notice" role="status" aria-live="polite">
+  <p class="notice__text">Biljetter kan enbart köpas på biografen! <br> Välkommen till oss på Storgatan 12.</p>
+  <span class="notice__hours">Öppettider: 08:00 – 22:00</span>
+  <button class="notice__close" type="button" aria-label="Stäng notis">&times;</button>
+</div>
+
 <body>
+  <header class="header">
+
+    <div class="header__theme">
+      <button class="header__theme-btn header__theme-btn--light" aria-label="toggle light">
+        <img class="header__theme-icon" src="/assets/toggle2-light.png" alt="Light mode icon">
+      </button>
   <header class="header">
 
     <div class="header__theme">
@@ -32,7 +57,25 @@
         <img class="header__theme-icon" src="/assets/toggle1-dark.png" alt="Dark mode icon">
       </button>
     </div>
+      <button class="header__theme-btn header__theme-btn--dark" aria-label="toggle dark">
+        <img class="header__theme-icon" src="/assets/toggle1-dark.png" alt="Dark mode icon">
+      </button>
+    </div>
 
+
+
+
+    <div class="header__top">
+      <button class="header__menu-button" aria-label="Menu">☰ MENY</button>
+      <img class="header__logo-dark" src="/assets/logo1-dark.png" alt="Logga - Kino bio">
+      <img class="header__logo-light" src="/assets/logo2-light.png" alt="Logga - Kino bio">
+
+      <div class="auth-buttons">
+        <button class="header__member-btn" aria-label="Logga in">Member</button>
+        <button class="header__login-btn" aria-label="Logga in">JOIN / LOGIN</button>
+        <button class="open-register">Registrera dig</button>
+      </div>
+    </div>
 
 
 
@@ -105,88 +148,124 @@
 
   </header>
   
+    <nav class="header__nav">
+      <button class="header__nav-close" aria-label="Stäng menyn">
+        ✕ <span class="close-menu">MENY</span></button>
+
+      <img class="header__nav-logodark" src="/assets/logo1-dark.png" alt="Logga - Kino bio">
+      <img class="header__nav-logolight" src="/assets/logo2-light.png" alt="Logga - Kino bio">
+
+
+      <ul class="header__nav-list">
+        <li class="header__nav-item"><a href="index.html">På bio just nu</a></li>
+        <li class="header__nav-item"><a href="all-movies.html">Kommande filmer</a></li>
+        <li class="header__nav-item"><a href="#">Barnbio</a></li>
+        <li class="header__nav-item"><a href="#">Presentkort</a></li>
+        <li class="header__nav-item"><a href="#">Café&Bistro</a></li>
+        <li class="header__nav-item"><a href="#">Event</a></li>
+        <li class="header__nav-item"><a href="#">Kundservice</a></li>
+        <li class="header__nav-item"><a href="#">Mina sidor</a></li>
+        <li class="header__nav-item"><a href="#">Företag</a></li>
+      </ul>
+    </nav>     
+
+
+
+  <div class="login">
+    <div class="login__modal">
+      <div class="login__content">
+        <button class="login__close" aria-label="Stäng">✕</button>
+        <h2 class="login__title">Logga in</h2>
+        <form class="login__form">
+          <input class="login__input" type="email" placeholder="E-post" name="email" required>
+          <input class="login__input" type="password" placeholder="Lösenord" name="password" required>
+
+          <a href="#" class="login__forgot">Glömt lösenord?</a>
+          <button class="login__submit" type="submit">Logga in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="register">
+    <div class="register__modal">
+      <div class="register__content">
+        <button class="register__close" aria-label="Stäng">✕</button>
+        <h2 class="register__title">Registrera dig</h2>
+        <form class="register__form">
+          <input class="register__input" type="text" placeholder="Namn" name="username" required>
+          <input class="register__input" type="email" placeholder="E-post" name="email" required>
+          <input class="register__input" type="password" placeholder="Lösenord" name="password" required>
+          <button class="register__submit" type="submit">Skapa konto</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  </header>
+  
 
   <main class="container">
-    <section class="carousel">
-      <div class="carousel_inner">
-        <!-- Slides -->
-        <div class="carousel_slide slide_1 active">
-          <div class="slide_content">
-            <h1 class="festival_title">Höstlovsbio på KINO</h1>
-            <h2 class="film_title">Neon Dreams</h2>
-            <div class="festival_dates">28 OCT - 7 NOV</div>
-          </div>
-        </div>
-
-             <div class="carousel_slide slide_2">
-          <div class="slide_content">
-            <h1 class="festival_title">Höstlovsbio på KINO</h1>
-            <h2 class="film_title">The Last Sunset</h2>
-            <div class="festival_dates">28 OCT - 7 NOV</div>
-          </div>
-        </div>
-
-        <div class="carousel_slide slide_3">
-          <div class="slide_content">
-            <h1 class="festival_title">Höstlovsbio på KINO</h1>
-            <h2 class="film_title">Echoes of Silence</h2>
-            <div class="festival_dates">28 OCT - 7 NOV</div>
-          </div>
-        </div>
-      </div>
-
-
-        <div class="carousel_controls_bottom">
-              <button class="carousel_control prev" type="button" aria-label="Previous slide">
-                <i class="fas fa-chevron-left"></i>
-              </button>
-              <button class="carousel_control next" type="button" aria-label="Next slide">
-                <i class="fas fa-chevron-right"></i>
-              </button>
+      <section class="carousel">
+            <div class="carousel_inner" id="heroInner">
+               
             </div>
-          
-
-          <div class="carousel_indicators">
-            <div class="indicator active" data_slide="0"></div>
-            <div class="indicator" data_slide="1"></div>
-            <div class="indicator" data_slide="2"></div>
-           
-          </div>
-
-
-          <div class="carousel_booking">
-            <button class="btn btn_join book_now_btn">Book Now</button>
+            <div class="carousel_controls_bottom" >
+                <button class="carousel_control prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel_control next"><i class="fas fa-chevron-right"></i></button>
             </div>
-    </section>
-
+      </section>
 
     
     <section class="movies_section">
       <h2 class="section_title">Aktuella visningar</h2>
+        <div class="day-selector" id="dayFilter">
+          <button class="day-btn active" data-day="Idag">Idag</button>
+          <button class="day-btn" data-day="Imorgon">Imorgon</button>
+          <button class="day-btn" data-day="Tor">Tor</button>
+          <button class="day-btn" data-day="Fre">Fre</button>
+          <button class="day-btn" data-day="Lör">Lör</button>
+          <button class="day-btn" data-day="Sön">Sön</button>
+        </div>
 
       <div class="movies_carousel movies-carousel">
         <button class="carousel_nav_btn prev_btn" type="button" aria-label="Previous movies">
           <i class="fas fa-chevron-left"></i>
         </button>
-
-        <div class="movies_carousel_container">
-          <div id="currentMoviesTrack" class="movies-carousel__track">
+        <div id="currentMoviesTrack" class="movies-carousel__track">
             <!-- Movie cards will be generated by JavaScript -->
-         </div>
         </div>
-
-            <button class="carousel_nav_btn next_btn" aria_label="Next movies">
-              <i class="fas fa_chevron_right"></i>
-            </button>
-
-            <div class="carousel_indicators movie_indicators" id="currentMoviesIndicators">
-              <!-- Indicators will be generated by JavaScript -->
-            </div>
-          </div>
-        </section>
+        <button class="carousel_nav_btn next_btn" aria_label="Next movies">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
 
 
         <section class="movies_section">
+          <h2 class="section_title">Kommande visningar</h2>
+
+          <div class="movies_carousel movies-carousel">
+            <button class="carousel_nav_btn prev_btn" type="button" aria-label="Previous events">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="movies_carousel_container">
+              <div id="comingSoonTrack" class="movies-carousel__track">
+                <!-- Movie cards will be generated by JavaScript -->
+              </div>
+            </div>
+
+            <button class="carousel_nav_btn next_btn" type="button" aria-label="Next events">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+
+
+              <div class="carousel_indicators movie_indicators" id="eventsIndicators">
+                <!-- Indicators will be generated by JavaScript -->
+             
+              </div>
           <h2 class="section_title">Kommande visningar</h2>
 
           <div class="movies_carousel movies-carousel">
@@ -213,6 +292,7 @@
         </section>
 
 
+
         <section class="movies_section">
           <h2 class="section_title">Aktuella och kommande event</h2>
 
@@ -225,7 +305,93 @@
               <div id="eventsTrack" class="movies-carousel__track">
                 <!-- Coming soon cards will be generated by JavaScript -->
               </div>
+          <h2 class="section_title">Aktuella och kommande event</h2>
+
+          <div class="movies_carousel movies-carousel">
+            <button class="carousel_nav_btn prev_btn" type="button" aria-label="Previous coming soon">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="movies_carousel_container">
+              <div id="eventsTrack" class="movies-carousel__track">
+                <!-- Coming soon cards will be generated by JavaScript -->
+              </div>
             </div>
+
+            <button class="carousel_nav_btn next_btn" type="button" aria-label="Next coming soon">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+
+            
+              <!-- Popularmovies, nothing we have discussed? I'll comment this out until we adress this.
+      <section class="movies_section">
+        <h2 class="section_title">Populära filmer</h2>
+
+        <div class="movies_carousel movies-carousel">
+          <button class="carousel_nav_btn prev_btn" type="button" aria-label="Previous popular movies">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <div class="movies_carousel_container">
+            <div id="popularMoviesTrack" class="movies-carousel__track"></div>
+          </div>
+
+
+          <button class="carousel_nav_btn next_btn" type="button" aria-label="Next popular movies">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+
+            <div class="movies_carousel">
+                <button class="carousel_nav_btn prev_btn" aria_label="Populära filmer">
+                    <i class="fas fa_chevron_left"></i>
+                </button>
+
+
+                <div class="movies_carousel_container">
+                    <div class="movies_carousel_track" id="popularMoviesTrack">
+                         Popular movie cards will be generated by JavaScript -->
+              <!-- Popular movie cards will be generated by JavaScript -->
+            </div>
+          </div>
+
+
+          <button class="carousel_nav_btn next_btn" aria_label="Next popular">
+            <i class="fas fa_chevron_right"></i>
+          </button>
+
+
+          <div class="carousel_indicators movie_indicators" id="popularMoviesIndicators">
+            <!-- Indicators will be generated by JavaScript -->
+          </div>
+      </div>
+    </section>
+    <section class="movies_section">
+      <h2 class="section_title">Café & Bistro</h2>
+      <div  class="bistro-products">
+        <article class="bistro">
+          <a href="#"><img src="assets/bistro-ac00.png" alt="Image symbolizing our Bistro Kino" /></a>
+          <h2 class="bistro-products__description">Våra paketerbjudanden</h2>
+        </article>
+        <article class="bistro-products__product">
+          <a href="breakfastmovie.html"><img src="assets/breakfast-movie-ac01.png" alt="Image symbolizing product Breakfast and movie" />
+          <h3 class="bistro-products__description">Köp frukost och se en film!</h3></a>
+        </article>
+        <article class="bistro-products__product">
+          <a href="#"><img src="assets/lunch-movie-ac02.png" alt="Image symbolizing product Lunch and movie" />
+          <h3 class="bistro-products__description">Passa på att se en film när ni äter lunch!</h3></a>
+        </article>
+        <article class="bistro-products__product">
+          <a href="#"><img src="assets/dinner-movie-ac03.png" alt="Image symbolizing product Dinner and movie" />
+          <h3 class="bistro-products__description">Bjud någon på en middag med film!</h3></a>
+        </article>
+        <article class="bistro-products__product">
+          <a href="#"><img src="assets/snacks-movie-ac04.png" alt="Image symbolizing product Snacks and movie" />
+          <h3 class="bistro-products__description">Färdiga snacks med filmen!</h3></a>
+        </article>
+      </div>   
+    </section>
+  </main>
 
             <button class="carousel_nav_btn next_btn" type="button" aria-label="Next coming soon">
               <i class="fas fa-chevron-right"></i>
@@ -371,7 +537,77 @@
               <div class="newsletter">
                 <h3 class="newsletter__title">Nyhetsbrev</h3>
                 <input class="newsletter__input" type="email" placeholder="you@example.com">
+  <!-- Player for trailers -->
+  <iframe
+    id="trailerIframe"
+    width="100%"
+    height="450"
+    src=""
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+
+  <footer>
+    <section class="footer__container">
+      <section class="footer__content">
+        <div class="footer__section footer__section--about">
+          <div class="footer__about"></div>
+          <h3>Om oss</h3>
+          <ul class="footer__links">
+            <li><a href="#">Jobba hos oss</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Om Kino</a></li>
+            <li><a href="#">Filmfestivalen</a></li>
+            <li><a href="#">Hitta hit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section footer__section--other">
+          <div class="footer__other"></div>
+          <h3>Övrigt</h3>
+          <ul class="footer__terms">
+            <li><a href="#">Köpvilkor</a></li>
+            <li><a href="#">Integritetspolicy</a></li>
+            <li><a href="#">Åldersgränser</a></li>
+            <li><a href="#">Tillgänglighet</a></li>
+
+          </ul>
+        </div>
+
+        <div class="footer__section footer__section--contact">
+          <div class="footer__contact"></div>
+          <h3>Hjälp & Kontakt</h3>
+          <ul class="footer__info">
+            <li><i class="fas fa_map_marker_alt"></i> <a
+                href="https://maps.google.com/?q=Storgatan 12, 123 45 Lycksele">Storgatan 12, 123 45
+                Lycksele</a></li>
+            <li><i class="fas fa_phone"></i> <a href="tel:+46950xxxxxxxx">+46 950-xxxxxxxx</a></li>
+            <li><i class="fas fa_envelope"></i> <a href="mailto:info@kino.com">info@kino.com</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section footer__section--social">
+          <div class="footer__social"></div>
+          <h3>Sociala medier</h3>
+          <div class="footer__icons">
+            <div class="social">
+              <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="footer__section footer__section--extra">
+          <div class="footer__extra">
+            <div class="footer__row">
+              <div class="newsletter">
+                <h3 class="newsletter__title">Nyhetsbrev</h3>
+                <input class="newsletter__input" type="email" placeholder="you@example.com">
                 <button class="newsletter__submit" type="submit">Anmäl dig</button>
+              </div>
               </div>
             </div>
           </div>
@@ -393,6 +629,26 @@
     </div>
     </div>
     <script type="module" src="/src/index.js"></script>
+          </div>
+        </div>
+        </div>
+
+      </section>
+    </section>
+  </footer>
+  <!--TRAILER MODAL-->
+  <div id="trailerModal" class="trailer-modal hidden">
+    <div class="trailer-modal__backdrop"></div>
+    <div class="trailer-modal__content">
+      <button class="trailer-modal__close" type="button">✕</button>
+
+      <iframe id="trailerIframe" width="100%" height="450" src="" frameborder="0" allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+    </div>
+    <script type="module" src="/src/index.js"></script>
 </body>
+
 
 </html>

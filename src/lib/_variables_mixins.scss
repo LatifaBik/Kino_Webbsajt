@@ -1,0 +1,61 @@
+/* variables-mixins.scss */
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin transition-standard {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+@mixin small-screen {
+    @media screen and (max-width: 510px) {
+        @content;
+    }
+}
+
+/* Dark mode palette */
+$dark-bg:      #1A0000;
+$dark-banner:  #E3E6B5;
+$dark-button:  #350000;
+$dark-footer:  #161313;
+$dark-menu:    #0C0000;
+$dark-text:    #FFFFFF;
+
+/* Light mode palette */
+$light-bg:     #EDEDED;
+$light-banner: #E3E6B5;
+$light-button: #350000;
+$light-footer: #C5C5C5;
+$light-menu:   #E8E3E3;
+$light-text:   #000000;
+
+/* Toggle colors */
+$toggle-on:    #FFF700;
+$toggle-off:   #707070;
+$toggle-bg:    #000000;
+
+$bg-color: #0d0404;
+$card-bg: #1a0808;
+$accent-red: #8b0000;
+$text-white: #e0e0e0;
+$text-muted: #aaa;
+$banner: #E3E6B5;
+$overlay-bg: rgba(0, 0, 0, 0.75);
+$footer-bg: #161313;
+$dark-red-bg: #4a0404;
+
+
+/* Carousel Variables*/
+$event-gap: 15px;
+$border-radius: 8px;
+$mobile-breakpoint: 768px;
+
+$gap-sm: 8px;
+$gap-md: 16px;
+$btn-bg: #350000;
+$btn-text: #ffffff;
+
+
+/*Bistro*/
+$bistro-radius: 20px;
+$bistro-dark: #2e2e2e;

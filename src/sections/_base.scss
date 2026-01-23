@@ -1,0 +1,77 @@
+@use '../lib/variables_mixins' as *;
+
+body {
+    background-color: --bg-color;
+    color: var(--text-white);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding-top: 50px;
+    overflow-x: hidden;
+    
+    // DEFAULT = DARK MODE
+    background: #1a0000;
+    color: var(--text-white);
+    
+    // LIGHT MODE
+    &.light {
+        background: #ededed;
+        color: #000000;
+        
+        .header__theme-btn--dark {
+            display: inline-grid;
+        }
+        
+        .header__theme-btn--light {
+            display: none;
+        }
+    }
+}
+
+.container {
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+// Notification Bar
+#promoBanner {
+    background-color: var(--banner);
+    color: var(--card-bg);
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    
+    &.hidden {
+        display: none;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+// Header Styles
+.auth-buttons {
+    .btn_login {
+        margin-left: 10px;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .btn_join {
+        margin-left: 10px;
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KINO _ Movie Theater</title>
+    <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font_awesome/6.4.0/css/all.min.css"> -->
+
+    <!--<link rel="stylesheet" href="main.css">-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+
+            <img class="header__logo" src="/assets/logo1.png" alt="Logga - Kino bio">
+            <div class="header__top">
+                <button class="header__menu-button" aria-label="Menu">☰ MENY</button>
+                <div class="header__auth">
+                    <button class="header__login-btn" aria-label="Logga in">JOIN / LOGIN</button>
+                    <button class="header__logout-btn" aria-label="Logga in">LOGOUT</button>
+
+                </div>
+            </div>
+        </header>
+    </div>
+
+    
+        <section  class="members__offers">
+            <h2 class="members__offers--title">Member page</h2>
+            <div class="members__offers--images">
+            <img src="/Assets/offers.png">
+            <img src="/Assets/offers.png">
+            <img src="/Assets/offers.png">
+            <img src="/Assets/offers.png">
+       </div>
+    </section>
+
+        <article class="review">
+            <h3 class="review__title">Review form</h3>
+
+            <form class="review__form" id="reviewForm">
+                <div class="review__field">
+                    <label class="review__label" for="movieTitle">Movie</label>
+                    <select class="review__input" id="movieTitle" name="movieTitle" required>
+                        <option value=" selected ">Choose a movie</option>
+                        <option value="Neon Dreams">Neon Dreams</option>
+                        <option value="The Last Sunset">The Last Sunset</option>
+                        <option value="Echoes of Silence">Echoes of Silence</option>
+                    </select>
+                </div>
+
+                <div class="review__field">
+                    <label class="review__label" for="rating">Rating (1–5)</label>
+                    <input class="review__input" id="rating" name="rating" type="number" min="1" max="5" required />
+                </div>
+
+                <div class="review__field">
+                    <label class="review__label" for="reviewText">Your review</label>
+                    <textarea class="review__input review__textarea" id="reviewText" name="reviewText" rows="4"
+                        minlength="10" maxlength="500" required
+                        placeholder="Write at least 10 characters..."></textarea>
+                </div>
+
+                <div class="review__actions">
+                    <button class="review__btn" type="submit">Submit review</button>
+                </div>
+            </form>
+
+        </article>
+
+    </section>
+
+
+
+    <footer>
+        <section class="footer__container">
+            <section class="footer__content">
+                <div class="footer__section footer__section--about">
+                    <div class="footer__about"></div>
+                    <h3>Om oss</h3>
+                    <ul class="footer__links">
+                        <li><a href="#">Jobba hos oss</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Om Kino</a></li>
+                        <li><a href="#">Filmfestivalen</a></li>
+                        <li><a href="#">Hitta hit</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section footer__section--other">
+                    <div class="footer__other"></div>
+                    <h3>Övrigt</h3>
+                    <ul class="footer__terms">
+                        <li><a href="#">Köpvilkor</a></li>
+                        <li><a href="#">Integritetspolicy</a></li>
+                        <li><a href="#">Åldersgränser</a></li>
+                        <li><a href="#">Tillgänglighet</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="footer__section footer__section--contact">
+                    <div class="footer__contact"></div>
+                    <h3>Hjälp & Kontakt</h3>
+                    <ul class="footer__info">
+                        <li><i class="fas fa_map_marker_alt"></i> <a
+                                href="https://maps.google.com/?q=Storgatan 12, 123 45 Lycksele">Storgatan 12, 123 45
+                                Lycksele</a></li>
+                        <li><i class="fas fa_phone"></i> <a href="tel:+46950xxxxxxxx">+46 950-xxxxxxxx</a></li>
+                        <li><i class="fas fa_envelope"></i> <a href="mailto:info@kino.com">info@kino.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section footer__section--social">
+                    <div class="footer__social"></div>
+                    <h3>Sociala medier</h3>
+                    <div class="footer__icons">
+                        <div class="social">
+                            <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="footer__section footer__section--extra">
+                    <div class="footer__extra">
+                        <div class="footer__row">
+                            <div class="newsletter">
+                                <h3 class="newsletter__title">Nyhetsbrev</h3>
+                                <input class="newsletter__input" type="email" placeholder="you@example.com">
+                                <button class="newsletter__submit" type="submit">Anmäl dig</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+        </section>
+
+        <!-- <section class="copyright">
+            <p>&copy; 2025 KINO. All rights reserved.</p>
+        </section>
+        </section> -->
+    </footer>
+
+    <script type="module" src="/src/index.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+@use '../lib/variables_mixins' as *; 
+ 
+.footer {
+  &__container {
+  display: flex;
+  flex-direction: column;
+  background-color: $dark-footer;
+  color: $dark-text;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+ }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 0.1rem;
+  }
+
+  &__section {
+    flex: 1 1 120px;     
+    padding: 0.1rem 3rem 0rem;
+    margin: 0rem;
+  }
+}
+.footer {
+  &__section--about  {
+    width: 100%;
+}
+  &__about {
+    flex: 1 1 220px;
+    padding: 1rem 2rem 0rem;      
+  }
+  &__links { 
+    font-size: 0.8rem;
+    color: $dark-text;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+   &__links a {
+    color: inherit;
+   text-decoration: underline;
+  }
+}
+.footer {
+  &__section--other {
+    width: 100%;
+  }
+  &__other {
+    flex: 1 1 220px;
+    padding: 1rem 4rem 0rem;       
+  } 
+  &__terms {
+    font-size: 0.8rem;
+    color: $dark-text;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+   &__terms a {
+    color: inherit;
+   text-decoration: underline;  
+  }
+}
+
+.footer {
+  &__section--contact {
+    width: 100%;
+  }
+  &__contact {
+    flex: 1 1 220px;
+    padding: 1rem 4rem 0rem;     
+  }
+  &__info {
+    font-size: 0.8rem;
+    color: $dark-text;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+&__info a {
+    color: inherit;
+   text-decoration: underline;
+  }
+}
+.footer {
+  &__section--social {
+    width: 100%;  
+    margin-top: -2rem;
+  }
+  &__social {
+    flex: 1 1 220px;
+    padding: 1rem 4rem 2rem;
+    
+      }
+  &__icons { 
+    color: $dark-text;
+    gap: 2rem;
+     font-size: 2.5rem;
+  }
+     &__icons a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+.footer {
+  &__section--extra {
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 1rem 2rem 2rem;
+    
+  }
+  &__extra {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 1rem 0;
+ }
+&__row {
+  display: flex;
+   align-items: center;
+  justify-content: center; 
+  width: 100%;
+   max-width: 420px; 
+  flex-wrap: nowrap;
+}
+}
+.newsletter {
+  display: block;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+    
+&__input {
+  padding: 0.5rem;
+ width: 8rem;
+  max-width: 100%;
+  border: none;
+  border-radius: 8px;
+  
+} 
+&__submit { 
+  background-color: $dark-button;
+  color: $dark-text;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  white-space: nowrap; 
+}
+
+}
+ 
+
+
+
+
+ 

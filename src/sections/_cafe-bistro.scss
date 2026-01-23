@@ -1,0 +1,53 @@
+@use '../lib/variables_mixins' as *;
+
+.bistro {
+    img {
+        width: 100%;
+        border-radius: $bistro-radius;
+        margin-bottom: 2rem;
+    }
+}
+
+.bistro-products{
+    // background-color: greenyellow;
+    border: 1px solid $dark-text;
+    border-radius: $bistro-radius;
+    padding: 3vh 1vw;
+    width: 83vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: $gap-md;
+    margin: auto;
+
+    &__product {
+        // background-color: red;
+        a {
+            display: grid;
+            grid-template-rows: 1fr auto;
+            text-decoration: none;
+            color: $dark-text;
+        }
+        img{
+            max-width: 40vw;
+            min-width: 15rem;
+            border-radius: $border-radius;
+            @include small-screen {
+                max-width: none;
+                min-width: none;
+                width: 100%;
+            }
+        }
+        // max-width: 26rem;
+    }
+
+    &__description {
+        text-align: center;
+        white-space: wrap;
+        margin-bottom: 2.5rem;
+        @include small-screen {
+            font-size: 1rem;
+        }
+    }
+    
+}

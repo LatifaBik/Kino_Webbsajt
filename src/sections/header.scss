@@ -1,0 +1,290 @@
+@use '../lib/variables_mixins' as *;
+
+.header {
+   position: relative;
+    flex-direction: column;
+   justify-content: flex-end;
+     height: 140px;     
+     
+
+    @include small-screen {
+        height: 270px;
+    }
+
+    &__logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        object-fit: contain;
+        top: 1rem; 
+    }
+
+    &__top {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+       
+
+        @include small-screen {
+            bottom: 10px;
+        }
+    }
+
+
+    &__menu-button {
+        background-color: $dark-bg;
+        color: $dark-text;
+        font-size: 1.4rem;
+        border: none;
+        cursor: pointer;
+        margin-right: auto;
+
+    }
+
+    &__auth {
+        display: flex;
+        align-items: center;
+    }
+
+    &__login-btn {
+        background: transparent;
+        color: #fff;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        cursor: pointer;
+        text-transform: uppercase;
+
+    }    
+     
+    &__nav {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.95);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        background-color: $dark-bg;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 3;
+        flex-direction: column;
+        justify-content: center;
+        animation: navfadeandscale .66s cubic-bezier(.53, .52, .04, 1.06) 0s 1 both;
+
+        &--active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+
+        &-logo {
+            position: absolute;
+            top: 3rem;
+            left: 52%;
+            transform: translateX(-50%);
+            max-width: 270px;
+        }
+
+        &-close {
+            position: absolute;
+            top: 2.5rem;
+            left: 1.1rem;
+            font-size: 2.3rem;
+            border: 0;
+            color: $dark-text;
+            cursor: pointer;
+            background-color: $dark-bg;
+        }
+
+        &-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; // centrerar vertikalt
+            height: 100vh; // tar hela höjden på sidan
+            margin-top:170px;
+        }
+
+        &-item {
+            margin: 0.3rem 0;
+            font-size: 1.5rem;
+            width: 260px;
+            text-align: left;
+
+            a {
+                text-decoration: none;
+                color: $dark-text;
+            }
+        }
+    }
+}
+
+.close-menu {
+    font-size: 1rem;
+}
+
+.open-register {
+        background: transparent;
+        color: #fff;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        cursor: pointer;
+ 
+    } 
+.register {
+
+    position: relative;
+
+    &__modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $dark-bg;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+
+        &--active {
+            display: flex;
+        }
+    }
+
+    &__content {
+        background: white;
+        padding: 4rem;
+        border-radius: 8px;
+        width: 300px;
+        position: relative;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__input {
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+    }
+
+    &__submit {
+        background: $dark-button;
+        color: white;
+        padding: 0.75rem;
+        border: none;
+        border-radius: 4px;
+    }
+
+    &__close {
+        position: absolute;
+        top: 0.2rem;
+        right: 0.2rem;
+        font-size: 1.9rem;
+        border: 0;
+        color: $light-text;
+        cursor: pointer;
+        background-color: transparent;
+    }
+}
+
+
+.login {
+    position: relative;
+
+    &__modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $dark-bg;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+
+        &--active {
+            display: flex;
+        }
+    }
+
+    &__content {
+        background: white;
+        padding: 4rem;
+        border-radius: 8px;
+        width: 300px;
+        position: relative;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__input {
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+    }
+
+    &__submit {
+        background: $dark-button;
+        color: white;
+        padding: 0.75rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    &__close {
+        position: absolute;
+        top: 0.2rem;
+        right: 0.2rem;
+        font-size: 1.9rem;
+        border: 0;
+        color: $light-text;
+        cursor: pointer;
+        background-color: transparent;
+    }
+
+    &__forgot {
+        font-size: 0.85rem;
+        color: #000000;
+        text-decoration: underline;
+        cursor: pointer;
+        display: block;
+        margin-top: 0.3rem;
+        margin-bottom: 1rem;
+        text-align: right;
+
+        &:hover {
+            color: $dark-button;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+@use '../lib/variables_mixins' as *;
+
+//  Carousel 
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 450px;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 5px solid $text-white;
+    border: 5px solid $text-white;
+    border-radius: 10px;
+    
+    &_slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 0.8s;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 40px;
+        pointer-events: none;
+        
+        &.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+    
+    &_control {
+        background: $dark-bg;
+        color: $text-white;
+        color: $text-white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    
+    &_controls_bottom {
+
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+        gap: 10px;
+        z-index: 1;
+        
+        i {
+            padding-top: 8px;
+            font-size: 12px;
+            cursor: pointer;
+            width: 24px;
+            height: 18px;
+        }
+    }
+}
